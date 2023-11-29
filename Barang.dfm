@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 219
-  Top = 157
+  Left = 254
+  Top = 167
   Width = 928
   Height = 480
   Caption = 'Barang'
@@ -218,6 +218,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'BARU'
     TabOrder = 6
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 136
@@ -226,6 +227,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'SIMPAN'
     TabOrder = 7
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 232
@@ -234,6 +236,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'EDIT'
     TabOrder = 8
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 320
@@ -242,6 +245,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'HAPUS'
     TabOrder = 9
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 408
@@ -250,6 +254,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'BATAL'
     TabOrder = 10
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 504
@@ -271,6 +276,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -279,10 +285,12 @@ object Form2: TForm2
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'butani_db'
+    Database = 'pertanian_db'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
+    LibraryLocation = 
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
+      'll'
     Left = 48
     Top = 360
   end

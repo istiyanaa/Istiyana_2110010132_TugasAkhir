@@ -16,7 +16,6 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
-    Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -24,7 +23,6 @@ type
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
-    Label16: TLabel;
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
@@ -32,7 +30,6 @@ type
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
-    Edit8: TEdit;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
@@ -75,7 +72,6 @@ begin
   Edit5.Clear;
   Edit6.Clear;
   Edit7.Clear;
-  Edit8.Clear;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -93,8 +89,6 @@ begin
   Edit5.Enabled:= True;
   Edit6.Enabled:= True;
   Edit7.Enabled:= True;
-  Edit8.Enabled:= True;
-
 end;
 
 procedure TForm1.posisiawal;
@@ -112,7 +106,6 @@ begin
   Edit5.Enabled:= False;
   Edit6.Enabled:= False;
   Edit7.Enabled:= False;
-  Edit8.Enabled:= False;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -131,13 +124,11 @@ if Edit1.Text = '' then
     ShowMessage('Alamat tidak boleh kosong!')
   else if Edit7.Text = '' then
     ShowMessage('Email tidak boleh kosong!')
-  else if Edit8.Text = '' then
-    ShowMessage('Level User tidak boleh kosong!')
   else
   begin
     ZQuery1.SQL.Clear;
-    ZQuery1.SQL.Add('INSERT INTO user (id_user, nama_lengkap, username, password, jenis_kelamin, alamat, email, level_user) ' +
-                  'VALUES (:id_user, :nama_lengkap, :username, :password, :jenis_kelamin, :alamat, :email, :level_user)');
+    ZQuery1.SQL.Add('INSERT INTO user (id_user, nama_lengkap, username, password, jenis_kelamin, alamat, email) ' +
+                  'VALUES (:id_user, :nama_lengkap, :username, :password, :jenis_kelamin, :alamat, :email)');
     ZQuery1.ParamByName('id_user').AsString := Edit1.Text;
     ZQuery1.ParamByName('nama_lengkap').AsString := Edit2.Text;
     ZQuery1.ParamByName('username').AsString := Edit3.Text;
@@ -145,7 +136,6 @@ if Edit1.Text = '' then
     ZQuery1.ParamByName('jenis_kelamin').AsString := Edit5.Text;
     ZQuery1.ParamByName('alamat').AsString := Edit6.Text;
     ZQuery1.ParamByName('email').AsString := Edit7.Text;
-    ZQuery1.ParamByName('level_user').AsString := Edit8.Text;
     ZQuery1.ExecSQL;
 
     ZQuery1.SQL.Clear;
@@ -160,7 +150,7 @@ procedure TForm1.Button3Click(Sender: TObject);
 var
   idUser: string;
 begin
-  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') or (Edit8.Text = '')then
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
@@ -180,7 +170,6 @@ begin
       ZQuery1.FieldByName('jenis_kelamin').AsString := Edit5.Text;
       ZQuery1.FieldByName('alamat').AsString := Edit6.Text;
       ZQuery1.FieldByName('email').AsString := Edit7.Text;
-      ZQuery1.FieldByName('level_user').AsString := Edit8.Text;
       ZQuery1.Post;
 
       ShowMessage('Data berhasil diperbarui!');
@@ -228,8 +217,7 @@ begin
   Edit5.Text := ZQuery1.FieldByName('jenis_kelamin').AsString;
   Edit6.Text := ZQuery1.FieldByName('alamat').AsString;
   Edit7.Text := ZQuery1.FieldByName('email').AsString;
-  Edit8.Text := ZQuery1.FieldByName('level_user').AsString;
-
+  
   Edit1.Enabled := True;
   Edit2.Enabled := True;
   Edit3.Enabled := True;

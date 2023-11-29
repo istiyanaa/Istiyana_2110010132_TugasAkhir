@@ -15,7 +15,7 @@ object Form4: TForm4
   TextHeight = 13
   object Label1: TLabel
     Left = 24
-    Top = 56
+    Top = 40
     Width = 76
     Height = 19
     Caption = 'id_penjualan'
@@ -28,7 +28,7 @@ object Form4: TForm4
   end
   object Label2: TLabel
     Left = 24
-    Top = 88
+    Top = 72
     Width = 60
     Height = 19
     Caption = 'id_barang'
@@ -41,7 +41,7 @@ object Form4: TForm4
   end
   object Label3: TLabel
     Left = 24
-    Top = 120
+    Top = 104
     Width = 44
     Height = 19
     Caption = 'id_user'
@@ -54,7 +54,7 @@ object Form4: TForm4
   end
   object Label4: TLabel
     Left = 24
-    Top = 152
+    Top = 136
     Width = 49
     Height = 19
     Caption = 'tglfaktur'
@@ -66,8 +66,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 312
-    Top = 56
+    Left = 24
+    Top = 160
     Width = 50
     Height = 19
     Caption = 'nofaktur'
@@ -79,8 +79,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 312
-    Top = 88
+    Left = 304
+    Top = 40
     Width = 62
     Height = 19
     Caption = 'harga_beli'
@@ -92,8 +92,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 312
-    Top = 120
+    Left = 304
+    Top = 72
     Width = 62
     Height = 19
     Caption = 'harga_jual'
@@ -105,8 +105,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 312
-    Top = 152
+    Left = 304
+    Top = 104
     Width = 73
     Height = 19
     Caption = 'banyak_beli'
@@ -119,7 +119,7 @@ object Form4: TForm4
   end
   object Label9: TLabel
     Left = 120
-    Top = 56
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -132,7 +132,7 @@ object Form4: TForm4
   end
   object Label10: TLabel
     Left = 120
-    Top = 88
+    Top = 72
     Width = 4
     Height = 21
     Caption = ':'
@@ -145,7 +145,7 @@ object Form4: TForm4
   end
   object Label11: TLabel
     Left = 120
-    Top = 120
+    Top = 104
     Width = 4
     Height = 21
     Caption = ':'
@@ -158,7 +158,7 @@ object Form4: TForm4
   end
   object Label12: TLabel
     Left = 120
-    Top = 152
+    Top = 136
     Width = 4
     Height = 21
     Caption = ':'
@@ -170,8 +170,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 408
-    Top = 56
+    Left = 120
+    Top = 160
     Width = 4
     Height = 21
     Caption = ':'
@@ -183,8 +183,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 408
-    Top = 88
+    Left = 400
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -196,8 +196,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 408
-    Top = 120
+    Left = 400
+    Top = 72
     Width = 4
     Height = 21
     Caption = ':'
@@ -209,8 +209,34 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label16: TLabel
-    Left = 408
-    Top = 152
+    Left = 400
+    Top = 104
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 304
+    Top = 136
+    Width = 79
+    Height = 19
+    Caption = 'id_pelanggan'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label18: TLabel
+    Left = 400
+    Top = 136
     Width = 4
     Height = 21
     Caption = ':'
@@ -223,103 +249,108 @@ object Form4: TForm4
   end
   object Edit1: TEdit
     Left = 136
-    Top = 56
+    Top = 40
     Width = 153
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 136
-    Top = 88
+    Top = 72
     Width = 153
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 136
-    Top = 120
+    Top = 104
     Width = 153
     Height = 21
     TabOrder = 2
   end
   object Edit4: TEdit
     Left = 136
-    Top = 152
+    Top = 136
     Width = 153
     Height = 21
     TabOrder = 3
   end
   object Edit5: TEdit
-    Left = 424
-    Top = 56
+    Left = 136
+    Top = 160
     Width = 153
     Height = 21
     TabOrder = 4
   end
   object Edit6: TEdit
-    Left = 424
-    Top = 88
+    Left = 416
+    Top = 40
     Width = 153
     Height = 21
     TabOrder = 5
   end
   object Edit7: TEdit
-    Left = 424
-    Top = 120
+    Left = 416
+    Top = 72
     Width = 153
     Height = 21
     TabOrder = 6
   end
   object Edit8: TEdit
-    Left = 424
-    Top = 152
+    Left = 416
+    Top = 104
     Width = 153
     Height = 21
     TabOrder = 7
   end
   object btn1: TButton
     Left = 40
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
-    Caption = 'BATAL'
+    Caption = 'BARU'
     TabOrder = 8
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 128
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
     TabOrder = 9
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 216
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'EDIT'
     TabOrder = 10
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 304
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'HAPUS'
     TabOrder = 11
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 392
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'BATAL'
     TabOrder = 12
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 480
-    Top = 192
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -327,7 +358,7 @@ object Form4: TForm4
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 232
+    Top = 240
     Width = 553
     Height = 129
     DataSource = ds1
@@ -337,6 +368,14 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+  end
+  object Edit9: TEdit
+    Left = 416
+    Top = 136
+    Width = 153
+    Height = 21
+    TabOrder = 15
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -350,7 +389,7 @@ object Form4: TForm4
     Protocol = 'mysql'
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 24
-    Top = 368
+    Top = 376
   end
   object zqry1: TZQuery
     Connection = con1
@@ -359,12 +398,12 @@ object Form4: TForm4
       'select * from penjualan')
     Params = <>
     Left = 72
-    Top = 368
+    Top = 376
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 120
-    Top = 368
+    Top = 376
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -382,7 +421,7 @@ object Form4: TForm4
       ''
       'end.')
     Left = 168
-    Top = 368
+    Top = 376
     Datasets = <>
     Variables = <>
     Style = <>
@@ -392,6 +431,6 @@ object Form4: TForm4
     CloseDataSource = False
     DataSource = ds1
     Left = 224
-    Top = 368
+    Top = 376
   end
 end

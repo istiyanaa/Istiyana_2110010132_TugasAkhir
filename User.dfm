@@ -104,19 +104,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label8: TLabel
-    Left = 360
-    Top = 144
-    Width = 60
-    Height = 19
-    Caption = 'level_user'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label9: TLabel
     Left = 128
     Top = 48
@@ -208,19 +195,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label16: TLabel
-    Left = 456
-    Top = 144
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Edit1: TEdit
     Left = 144
     Top = 48
@@ -270,20 +244,13 @@ object Form1: TForm1
     Height = 21
     TabOrder = 6
   end
-  object Edit8: TEdit
-    Left = 472
-    Top = 144
-    Width = 185
-    Height = 21
-    TabOrder = 7
-  end
   object Button1: TButton
     Left = 48
     Top = 184
     Width = 75
     Height = 25
     Caption = 'BARU'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -292,7 +259,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = Button2Click
   end
   object Button3: TButton
@@ -301,7 +268,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = Button3Click
   end
   object DBGrid1: TDBGrid
@@ -310,7 +277,7 @@ object Form1: TForm1
     Width = 633
     Height = 153
     DataSource = ds1
-    TabOrder = 11
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -324,7 +291,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = Button4Click
   end
   object Button5: TButton
@@ -333,7 +300,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'BATAL'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = Button5Click
   end
   object btn1: TButton
@@ -342,7 +309,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
-    TabOrder = 14
+    TabOrder = 13
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -351,10 +318,12 @@ object Form1: TForm1
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'butani_db'
+    Database = 'pertanian_db'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
+    LibraryLocation = 
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
+      'll'
     Left = 48
     Top = 400
   end
