@@ -246,10 +246,12 @@ object Form7: TForm7
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'butani_db'
+    Database = 'pertanian_db'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
+    LibraryLocation = 
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
+      'll'
     Left = 24
     Top = 376
   end

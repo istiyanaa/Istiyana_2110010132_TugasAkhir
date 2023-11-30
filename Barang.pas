@@ -10,20 +10,10 @@ uses
 
 type
   TForm2 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
     Edit5: TEdit;
@@ -40,6 +30,8 @@ type
     ds1: TDataSource;
     frxrprt1: TfrxReport;
     frxdbdtst1: TfrxDBDataset;
+    Edit1: TEdit;
+    Label1: TLabel;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -63,8 +55,6 @@ implementation
 
 procedure TForm2.bersih;
 begin
-  Edit1.Clear;
-  Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
   Edit5.Clear;
@@ -79,8 +69,6 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= True;
-  Edit1.Enabled:= True;
-  Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
   Edit5.Enabled:= True;
@@ -95,8 +83,6 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
-  Edit1.Enabled:= False;
-  Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
   Edit5.Enabled:= False;
@@ -106,28 +92,28 @@ end;
 procedure TForm2.btn2Click(Sender: TObject);
 begin
 if Edit1.Text = '' then
-    ShowMessage('Id Barang tidak boleh kosong!')
-  else if Edit2.Text = '' then
-    ShowMessage('Id Stok tidak boleh kosong!')
-  else if Edit3.Text = '' then
-    ShowMessage('Nama Barang tidak boleh kosong!')
-  else if Edit4.Text = '' then
-    ShowMessage('Satuan tidak boleh kosong!')
-  else if Edit5.Text = '' then
-    ShowMessage('Harga Beli tidak boleh kosong!')
-  else if Edit6.Text = '' then
-    ShowMessage('Harga Jual tidak boleh kosong!')
-  else
+begin
+    ShowMessage('Nama Barang tidak boleh kosong!');
+end else
+if Edit3.Text = '' then
+begin
+    ShowMessage('Nama Barang tidak boleh kosong!');
+end else
+if Edit4.Text = '' then
+begin
+    ShowMessage('Nama Barang tidak boleh kosong!');
+end else
+if Edit5.Text = '' then
+begin
+    ShowMessage('Nama Barang tidak boleh kosong!');
+end else
+if Edit6.Text = '' then
+begin
+    ShowMessage('Nama Barang tidak boleh kosong!');
+end else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO barang (id_barang, id_stok, nama_barang, satuan, harga_beli, harga_jual) ' +
-                  'VALUES (:id_barang, :id_stok, :nama_barang, :satuan, :harga_beli, :harga_jual)');
-    zqry1.ParamByName('id_barang').AsString := Edit1.Text;
-    zqry1.ParamByName('id_stok').AsString := Edit2.Text;
-    zqry1.ParamByName('nama_barang').AsString := Edit3.Text;
-    zqry1.ParamByName('satuan').AsString := Edit4.Text;
-    zqry1.ParamByName('harga_beli').AsString := Edit5.Text;
-    zqry1.ParamByName('harga_jual').AsString := Edit6.Text;
+    zqry1.SQL.Add('INSERT INTO barang VALUES (null, "'+Edit1.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'","'+Edit6.Text+'")');
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;
@@ -142,7 +128,7 @@ procedure TForm2.btn3Click(Sender: TObject);
 var
   idUser: string;
 begin
-  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') then
+  if (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
@@ -152,11 +138,9 @@ begin
     idUser := zqry1.FieldByName('id_barang').AsString;
 
     // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit1.Text = idUser then
+    if Edit3.Text = idUser then
     begin
       zqry1.Edit;
-      zqry1.FieldByName('id_barang').AsString := Edit1.Text;
-      zqry1.FieldByName('id_stok').AsString := Edit2.Text;
       zqry1.FieldByName('nama_barang').AsString := Edit3.Text;
       zqry1.FieldByName('satuan').AsString :=Edit4.Text;
       zqry1.FieldByName('harga_beli').AsString := Edit5.Text;
@@ -207,15 +191,11 @@ end;
 
 procedure TForm2.dbgrd1CellClick(Column: TColumn);
 begin
-  Edit1.Text := zqry1.FieldByName('id_barang').AsString;
-  Edit2.Text := zqry1.FieldByName('id_stok').AsString;
   Edit3.Text := zqry1.FieldByName('nama_barang').AsString;
   Edit4.Text := zqry1.FieldByName('satuan').AsString;
   Edit5.Text := zqry1.FieldByName('harga_beli').AsString;
   Edit6.Text := zqry1.FieldByName('harga_jual').AsString;
 
-  Edit1.Enabled := True;
-  Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
   Edit5.Enabled := True;

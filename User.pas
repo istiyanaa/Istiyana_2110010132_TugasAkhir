@@ -9,21 +9,18 @@ uses
 
 type
   TForm1 = class(TForm)
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
-    Label9: TLabel;
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
     Label15: TLabel;
-    Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
@@ -65,7 +62,6 @@ implementation
 
 procedure TForm1.bersih;
 begin
-  Edit1.Clear;
   Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
@@ -82,7 +78,6 @@ begin
   Button3.Enabled:= False;
   Button4.Enabled:= False;
   Button5.Enabled:= True;
-  Edit1.Enabled:= True;
   Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
@@ -99,7 +94,6 @@ begin
   Button3.Enabled:= False;
   Button4.Enabled:= False;
   Button5.Enabled:= False;
-  Edit1.Enabled:= False;
   Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
@@ -110,9 +104,7 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-if Edit1.Text = '' then
-    ShowMessage('Id User tidak boleh kosong!')
-  else if Edit2.Text = '' then
+if Edit2.Text = '' then
     ShowMessage('Nama Lengkap tidak boleh kosong!')
   else if Edit3.Text = '' then
     ShowMessage('Username tidak boleh kosong!')
@@ -127,15 +119,7 @@ if Edit1.Text = '' then
   else
   begin
     ZQuery1.SQL.Clear;
-    ZQuery1.SQL.Add('INSERT INTO user (id_user, nama_lengkap, username, password, jenis_kelamin, alamat, email) ' +
-                  'VALUES (:id_user, :nama_lengkap, :username, :password, :jenis_kelamin, :alamat, :email)');
-    ZQuery1.ParamByName('id_user').AsString := Edit1.Text;
-    ZQuery1.ParamByName('nama_lengkap').AsString := Edit2.Text;
-    ZQuery1.ParamByName('username').AsString := Edit3.Text;
-    ZQuery1.ParamByName('password').AsString := Edit4.Text;
-    ZQuery1.ParamByName('jenis_kelamin').AsString := Edit5.Text;
-    ZQuery1.ParamByName('alamat').AsString := Edit6.Text;
-    ZQuery1.ParamByName('email').AsString := Edit7.Text;
+    ZQuery1.SQL.Add('INSERT INTO user VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'","'+Edit6.Text+'","'+Edit7.Text+'")');
     ZQuery1.ExecSQL;
 
     ZQuery1.SQL.Clear;
@@ -150,7 +134,7 @@ procedure TForm1.Button3Click(Sender: TObject);
 var
   idUser: string;
 begin
-  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') then
+  if (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
@@ -160,10 +144,9 @@ begin
     idUser := ZQuery1.FieldByName('id_user').AsString;
 
     // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit1.Text = idUser then
+    if Edit2.Text = idUser then
     begin
       ZQuery1.Edit;
-      ZQuery1.FieldByName('id_user').AsString := Edit1.Text;
       ZQuery1.FieldByName('nama_lengkap').AsString := Edit2.Text;
       ZQuery1.FieldByName('username').AsString := Edit3.Text;
       ZQuery1.FieldByName('password').AsString :=Edit4.Text;
@@ -210,15 +193,13 @@ end;
 
 procedure TForm1.DBGrid1CellClick(Column: TColumn);
 begin
-  Edit1.Text := ZQuery1.FieldByName('id_user').AsString;
   Edit2.Text := ZQuery1.FieldByName('nama_lengkap').AsString;
   Edit3.Text := ZQuery1.FieldByName('username').AsString;
   Edit4.Text := ZQuery1.FieldByName('password').AsString;
   Edit5.Text := ZQuery1.FieldByName('jenis_kelamin').AsString;
   Edit6.Text := ZQuery1.FieldByName('alamat').AsString;
   Edit7.Text := ZQuery1.FieldByName('email').AsString;
-  
-  Edit1.Enabled := True;
+
   Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;

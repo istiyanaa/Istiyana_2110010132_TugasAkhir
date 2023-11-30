@@ -10,7 +10,6 @@ uses
 
 type
   TForm3 = class(TForm)
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -18,7 +17,6 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    Label9: TLabel;
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
@@ -26,7 +24,6 @@ type
     Label14: TLabel;
     Label15: TLabel;
     Label16: TLabel;
-    Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
@@ -73,7 +70,6 @@ implementation
 
 procedure TForm3.bersih;
 begin
-  Edit1.Clear;
   Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
@@ -92,7 +88,6 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= True;
-  Edit1.Enabled:= True;
   Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
@@ -111,7 +106,6 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
-  Edit1.Enabled:= False;
   Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
@@ -126,7 +120,7 @@ procedure TForm3.btn3Click(Sender: TObject);
 var
   idUser: string;
 begin
-  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') or (Edit8.Text = '') or (Edit9.Text = '') then
+  if (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') or (Edit8.Text = '') or (Edit9.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
@@ -136,10 +130,9 @@ begin
     idUser := zqry1.FieldByName('id_pembelian').AsString;
 
     // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit1.Text = idUser then
+    if Edit2.Text = idUser then
     begin
       zqry1.Edit;
-      zqry1.FieldByName('id_pembelian').AsString := Edit1.Text;
       zqry1.FieldByName('id_barang').AsString := Edit2.Text;
       zqry1.FieldByName('id_supplier').AsString := Edit3.Text;
       zqry1.FieldByName('id_user').AsString :=Edit4.Text;
@@ -193,7 +186,6 @@ end;
 
 procedure TForm3.dbgrd1CellClick(Column: TColumn);
 begin
-  Edit1.Text := zqry1.FieldByName('id_pembelian').AsString;
   Edit2.Text := zqry1.FieldByName('id_barang').AsString;
   Edit3.Text := zqry1.FieldByName('id_supplier').AsString;
   Edit4.Text := zqry1.FieldByName('id_user').AsString;
@@ -203,7 +195,6 @@ begin
   Edit8.Text := zqry1.FieldByName('harga_jual').AsString;
   Edit9.Text := zqry1.FieldByName('banyak_keluar').AsString;
 
-  Edit1.Enabled := True;
   Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
@@ -218,38 +209,41 @@ end;
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin
-if Edit1.Text = '' then
-    ShowMessage('Id Pembelian tidak boleh kosong!')
-  else if Edit2.Text = '' then
-    ShowMessage('Id Barang tidak boleh kosong!')
-  else if Edit3.Text = '' then
-    ShowMessage('Id Supplier tidak boleh kosong!')
-  else if Edit4.Text = '' then
-    ShowMessage('Id User tidak boleh kosong!')
-  else if Edit5.Text = '' then
-    ShowMessage('No Faktur tidak boleh kosong!')
-  else if Edit6.Text = '' then
-    ShowMessage('Tanggal Faktur tidak boleh kosong!')
-  else if Edit7.Text = '' then
-    ShowMessage('Harga Beli tidak boleh kosong!')
-  else if Edit8.Text = '' then
-    ShowMessage('Harga Jual tidak boleh kosong!')
-  else if Edit9.Text = '' then
-    ShowMessage('Banyak Keluar tidak boleh kosong!')
-  else
+if Edit2.Text = '' then
+begin
+    ShowMessage('ID Barang tidak boleh kosong!');
+end else
+if Edit3.Text = '' then
+begin
+    ShowMessage('ID Supplier tidak boleh kosong!');
+end else
+if Edit4.Text = '' then
+begin
+    ShowMessage('ID User tidak boleh kosong!');
+end else
+if Edit5.Text = '' then
+begin
+    ShowMessage('No Faktur tidak boleh kosong!');
+end else
+if Edit6.Text = '' then
+begin
+    ShowMessage('Tanggal Faktur tidak boleh kosong!');
+end else
+if Edit7.Text = '' then
+begin
+    ShowMessage('Harga Beli tidak boleh kosong!');
+end else
+if Edit8.Text = '' then
+begin
+    ShowMessage('Harga Jual tidak boleh kosong!');
+end else
+if Edit9.Text = '' then
+begin
+    ShowMessage('Banyak Keluar tidak boleh kosong!');
+end else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO pembelian (id_pembelian, id_barang, id_supplier, id_user, nofaktur, tglfaktur, harga_beli, harga_jual, banyak_keluar) ' +
-                  'VALUES (:id_pembelian, :id_barang, :id_supplier, :id_user, :nofaktur, :tglfaktur, :harga_beli, :harga_jual, :banyak_keluar)');
-    zqry1.ParamByName('id_pembelian').AsString := Edit1.Text;
-    zqry1.ParamByName('id_barang').AsString := Edit2.Text;
-    zqry1.ParamByName('id_supplier').AsString := Edit3.Text;
-    zqry1.ParamByName('id_user').AsString := Edit4.Text;
-    zqry1.ParamByName('nofaktur').AsString := Edit5.Text;
-    zqry1.ParamByName('tglfaktur').AsString := Edit6.Text;
-    zqry1.ParamByName('harga_beli').AsString := Edit7.Text;
-    zqry1.ParamByName('harga_jual').AsString := Edit8.Text;
-    zqry1.ParamByName('banyak_keluar').AsString := Edit9.Text;
+    zqry1.SQL.Add('INSERT INTO pembelian VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'","'+Edit6.Text+'","'+Edit7.Text+'","'+Edit8.Text+'","'+Edit9.Text+'")');
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;

@@ -13,25 +13,12 @@ object Form4: TForm4
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 24
-    Top = 40
-    Width = 76
-    Height = 19
-    Caption = 'id_penjualan'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label2: TLabel
     Left = 24
-    Top = 72
-    Width = 60
+    Top = 40
+    Width = 81
     Height = 19
-    Caption = 'id_barang'
+    Caption = 'ID Pelanggan'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -41,10 +28,10 @@ object Form4: TForm4
   end
   object Label3: TLabel
     Left = 24
-    Top = 104
-    Width = 44
+    Top = 72
+    Width = 63
     Height = 19
-    Caption = 'id_user'
+    Caption = 'ID Barang'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -54,10 +41,10 @@ object Form4: TForm4
   end
   object Label4: TLabel
     Left = 24
-    Top = 136
+    Top = 104
     Width = 49
     Height = 19
-    Caption = 'tglfaktur'
+    Caption = 'ID User'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -67,10 +54,10 @@ object Form4: TForm4
   end
   object Label5: TLabel
     Left = 24
-    Top = 160
-    Width = 50
+    Top = 136
+    Width = 64
     Height = 19
-    Caption = 'nofaktur'
+    Caption = 'No Faktur'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -81,9 +68,9 @@ object Form4: TForm4
   object Label6: TLabel
     Left = 304
     Top = 40
-    Width = 62
+    Width = 90
     Height = 19
-    Caption = 'harga_beli'
+    Caption = 'Tanggal Faktur'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -94,9 +81,9 @@ object Form4: TForm4
   object Label7: TLabel
     Left = 304
     Top = 72
-    Width = 62
+    Width = 64
     Height = 19
-    Caption = 'harga_jual'
+    Caption = 'Harga Beli'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -107,9 +94,9 @@ object Form4: TForm4
   object Label8: TLabel
     Left = 304
     Top = 104
-    Width = 73
+    Width = 64
     Height = 19
-    Caption = 'banyak_beli'
+    Caption = 'Harga Jual'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -117,22 +104,9 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
-  object Label9: TLabel
-    Left = 120
-    Top = 40
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label10: TLabel
     Left = 120
-    Top = 72
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -145,7 +119,7 @@ object Form4: TForm4
   end
   object Label11: TLabel
     Left = 120
-    Top = 104
+    Top = 72
     Width = 4
     Height = 21
     Caption = ':'
@@ -158,7 +132,7 @@ object Form4: TForm4
   end
   object Label12: TLabel
     Left = 120
-    Top = 136
+    Top = 104
     Width = 4
     Height = 21
     Caption = ':'
@@ -171,7 +145,7 @@ object Form4: TForm4
   end
   object Label13: TLabel
     Left = 120
-    Top = 160
+    Top = 136
     Width = 4
     Height = 21
     Caption = ':'
@@ -224,9 +198,9 @@ object Form4: TForm4
   object Label17: TLabel
     Left = 304
     Top = 136
-    Width = 79
+    Width = 91
     Height = 19
-    Caption = 'id_pelanggan'
+    Caption = 'Banyak Keluar'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -247,61 +221,54 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
-  object Edit1: TEdit
+  object Edit2: TEdit
     Left = 136
     Top = 40
     Width = 153
     Height = 21
     TabOrder = 0
   end
-  object Edit2: TEdit
+  object Edit3: TEdit
     Left = 136
     Top = 72
     Width = 153
     Height = 21
     TabOrder = 1
   end
-  object Edit3: TEdit
+  object Edit4: TEdit
     Left = 136
     Top = 104
     Width = 153
     Height = 21
     TabOrder = 2
   end
-  object Edit4: TEdit
+  object Edit5: TEdit
     Left = 136
     Top = 136
     Width = 153
     Height = 21
     TabOrder = 3
   end
-  object Edit5: TEdit
-    Left = 136
-    Top = 160
-    Width = 153
-    Height = 21
-    TabOrder = 4
-  end
   object Edit6: TEdit
     Left = 416
     Top = 40
     Width = 153
     Height = 21
-    TabOrder = 5
+    TabOrder = 4
   end
   object Edit7: TEdit
     Left = 416
     Top = 72
     Width = 153
     Height = 21
-    TabOrder = 6
+    TabOrder = 5
   end
   object Edit8: TEdit
     Left = 416
     Top = 104
     Width = 153
     Height = 21
-    TabOrder = 7
+    TabOrder = 6
   end
   object btn1: TButton
     Left = 40
@@ -309,7 +276,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'BARU'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = btn1Click
   end
   object btn2: TButton
@@ -318,7 +285,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = btn2Click
   end
   object btn3: TButton
@@ -327,7 +294,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = btn3Click
   end
   object btn4: TButton
@@ -336,7 +303,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 11
+    TabOrder = 10
     OnClick = btn4Click
   end
   object btn5: TButton
@@ -345,7 +312,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'BATAL'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = btn5Click
   end
   object btn6: TButton
@@ -354,7 +321,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
-    TabOrder = 13
+    TabOrder = 12
   end
   object dbgrd1: TDBGrid
     Left = 24
@@ -362,7 +329,7 @@ object Form4: TForm4
     Width = 553
     Height = 129
     DataSource = ds1
-    TabOrder = 14
+    TabOrder = 13
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -375,7 +342,7 @@ object Form4: TForm4
     Top = 136
     Width = 153
     Height = 21
-    TabOrder = 15
+    TabOrder = 14
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -384,10 +351,12 @@ object Form4: TForm4
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'butani_db'
+    Database = 'pertanian_db'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
+    LibraryLocation = 
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
+      'll'
     Left = 24
     Top = 376
   end

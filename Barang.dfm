@@ -13,38 +13,12 @@ object Form2: TForm2
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 40
-    Top = 64
-    Width = 60
-    Height = 19
-    Caption = 'id_barang'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label2: TLabel
-    Left = 40
-    Top = 96
-    Width = 45
-    Height = 19
-    Caption = 'id_stok'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label3: TLabel
     Left = 40
-    Top = 128
-    Width = 81
+    Top = 96
+    Width = 84
     Height = 19
-    Caption = 'nama_barang'
+    Caption = 'Nama Barang'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -53,11 +27,11 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 312
-    Top = 64
-    Width = 38
+    Left = 40
+    Top = 128
+    Width = 41
     Height = 19
-    Caption = 'satuan'
+    Caption = 'Satuan'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -66,11 +40,11 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 312
-    Top = 96
-    Width = 62
+    Left = 328
+    Top = 56
+    Width = 64
     Height = 19
-    Caption = 'harga_beli'
+    Caption = 'Harga Beli'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -79,11 +53,11 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 312
-    Top = 128
-    Width = 62
+    Left = 328
+    Top = 88
+    Width = 64
     Height = 19
-    Caption = 'harga_jual'
+    Caption = 'Harga Jual'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -91,125 +65,46 @@ object Form2: TForm2
     Font.Style = []
     ParentFont = False
   end
-  object Label7: TLabel
-    Left = 131
+  object Label1: TLabel
+    Left = 40
     Top = 64
-    Width = 4
-    Height = 21
-    Caption = ':'
+    Width = 49
+    Height = 19
+    Caption = 'ID Stok'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
-  end
-  object Label8: TLabel
-    Left = 131
-    Top = 96
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label9: TLabel
-    Left = 131
-    Top = 128
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label10: TLabel
-    Left = 401
-    Top = 64
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label11: TLabel
-    Left = 400
-    Top = 96
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label12: TLabel
-    Left = 403
-    Top = 128
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Edit1: TEdit
-    Left = 144
-    Top = 64
-    Width = 145
-    Height = 21
-    TabOrder = 0
-  end
-  object Edit2: TEdit
-    Left = 144
-    Top = 96
-    Width = 145
-    Height = 21
-    TabOrder = 1
   end
   object Edit3: TEdit
     Left = 144
-    Top = 128
-    Width = 145
+    Top = 96
+    Width = 153
     Height = 21
-    TabOrder = 2
+    TabOrder = 0
   end
   object Edit4: TEdit
-    Left = 416
-    Top = 64
-    Width = 161
+    Left = 144
+    Top = 128
+    Width = 153
     Height = 21
-    TabOrder = 3
+    TabOrder = 1
   end
   object Edit5: TEdit
     Left = 416
-    Top = 96
+    Top = 56
     Width = 161
     Height = 21
-    TabOrder = 4
+    TabOrder = 2
   end
   object Edit6: TEdit
     Left = 416
-    Top = 128
+    Top = 88
     Width = 161
     Height = 21
-    TabOrder = 5
+    TabOrder = 3
   end
   object btn1: TButton
     Left = 40
@@ -217,7 +112,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'BARU'
-    TabOrder = 6
+    TabOrder = 4
     OnClick = btn1Click
   end
   object btn2: TButton
@@ -226,7 +121,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 7
+    TabOrder = 5
     OnClick = btn2Click
   end
   object btn3: TButton
@@ -235,7 +130,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 8
+    TabOrder = 6
     OnClick = btn3Click
   end
   object btn4: TButton
@@ -244,7 +139,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 9
+    TabOrder = 7
     OnClick = btn4Click
   end
   object btn5: TButton
@@ -253,7 +148,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'BATAL'
-    TabOrder = 10
+    TabOrder = 8
     OnClick = btn5Click
   end
   object btn6: TButton
@@ -262,7 +157,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
-    TabOrder = 11
+    TabOrder = 9
   end
   object dbgrd1: TDBGrid
     Left = 40
@@ -270,13 +165,20 @@ object Form2: TForm2
     Width = 553
     Height = 137
     DataSource = ds1
-    TabOrder = 12
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+  end
+  object Edit1: TEdit
+    Left = 144
+    Top = 64
+    Width = 153
+    Height = 21
+    TabOrder = 11
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

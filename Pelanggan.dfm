@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 192
-  Top = 125
+  Left = 252
+  Top = 160
   Width = 928
   Height = 480
   Caption = 'Pelanggan'
@@ -13,25 +13,12 @@ object Form5: TForm5
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 16
-    Top = 56
-    Width = 79
-    Height = 19
-    Caption = 'id_pelanggan'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label2: TLabel
-    Left = 16
-    Top = 88
-    Width = 100
+    Left = 24
+    Top = 56
+    Width = 102
     Height = 19
-    Caption = 'nama_pelanggan'
+    Caption = 'Nama Pelanggan'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -40,11 +27,11 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 16
-    Top = 120
-    Width = 107
+    Left = 24
+    Top = 88
+    Width = 106
     Height = 19
-    Caption = 'alamat_pelanggan'
+    Caption = 'Telpon Pelanggan'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -55,9 +42,9 @@ object Form5: TForm5
   object Label4: TLabel
     Left = 312
     Top = 56
-    Width = 90
+    Width = 98
     Height = 19
-    Caption = 'telp_pelanggan'
+    Caption = 'Email Pelanggan'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -68,45 +55,19 @@ object Form5: TForm5
   object Label5: TLabel
     Left = 312
     Top = 88
-    Width = 99
+    Width = 43
     Height = 19
-    Caption = 'email_pelanggan'
+    Caption = 'Alamat'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label6: TLabel
-    Left = 312
-    Top = 120
-    Width = 42
-    Height = 19
-    Caption = 'tanggal'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label7: TLabel
-    Left = 131
-    Top = 56
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 131
-    Top = 88
+    Left = 139
+    Top = 56
     Width = 4
     Height = 21
     Caption = ':'
@@ -118,8 +79,8 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label9: TLabel
-    Left = 131
-    Top = 120
+    Left = 139
+    Top = 88
     Width = 4
     Height = 21
     Caption = ':'
@@ -156,121 +117,100 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
   end
-  object Label12: TLabel
-    Left = 427
-    Top = 120
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Edit1: TEdit
-    Left = 144
+  object Edit2: TEdit
+    Left = 152
     Top = 56
     Width = 153
     Height = 21
     TabOrder = 0
   end
-  object Edit2: TEdit
-    Left = 144
+  object Edit3: TEdit
+    Left = 152
     Top = 88
     Width = 153
     Height = 21
     TabOrder = 1
-  end
-  object Edit3: TEdit
-    Left = 144
-    Top = 120
-    Width = 153
-    Height = 21
-    TabOrder = 2
   end
   object Edit4: TEdit
     Left = 440
     Top = 56
     Width = 153
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object Edit5: TEdit
     Left = 440
     Top = 88
     Width = 153
     Height = 21
-    TabOrder = 4
-  end
-  object Edit6: TEdit
-    Left = 440
-    Top = 120
-    Width = 153
-    Height = 21
-    TabOrder = 5
+    TabOrder = 3
   end
   object btn1: TButton
     Left = 48
-    Top = 160
+    Top = 128
     Width = 75
     Height = 25
-    Caption = 'BATAL'
-    TabOrder = 6
+    Caption = 'BARU'
+    TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 136
-    Top = 160
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 7
+    TabOrder = 5
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 224
-    Top = 160
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 8
+    TabOrder = 6
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 312
-    Top = 160
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 9
-  end
-  object btn5: TButton
-    Left = 400
-    Top = 160
-    Width = 75
-    Height = 25
-    Caption = 'BATAL'
-    TabOrder = 10
+    TabOrder = 7
+    OnClick = btn4Click
   end
   object btn6: TButton
-    Left = 488
-    Top = 160
+    Left = 496
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
-    TabOrder = 11
+    TabOrder = 8
   end
-  object dbgrd1: TDBGrid
-    Left = 16
-    Top = 200
+  object Button1: TButton
+    Left = 408
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'BATAL'
+    TabOrder = 9
+    OnClick = Button1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 168
     Width = 577
-    Height = 129
+    Height = 120
     DataSource = ds1
-    TabOrder = 12
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -279,12 +219,14 @@ object Form5: TForm5
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'butani_db'
+    Database = 'pertanian_db'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
+    LibraryLocation = 
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
+      'll'
     Left = 16
-    Top = 336
+    Top = 304
   end
   object zqry1: TZQuery
     Connection = con1
@@ -293,12 +235,12 @@ object Form5: TForm5
       'select * from pelanggan')
     Params = <>
     Left = 64
-    Top = 336
+    Top = 304
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 112
-    Top = 336
+    Top = 304
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -316,7 +258,7 @@ object Form5: TForm5
       ''
       'end.')
     Left = 160
-    Top = 336
+    Top = 304
     Datasets = <>
     Variables = <>
     Style = <>
@@ -326,6 +268,6 @@ object Form5: TForm5
     CloseDataSource = False
     DataSource = ds1
     Left = 216
-    Top = 336
+    Top = 304
   end
 end
