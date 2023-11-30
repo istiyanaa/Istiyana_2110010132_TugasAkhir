@@ -1,10 +1,10 @@
 object Form7: TForm7
-  Left = 203
-  Top = 112
-  Width = 928
+  Left = 253
+  Top = 151
+  Width = 606
   Height = 480
   Caption = 'Supplier'
-  Color = clBtnFace
+  Color = clGradientInactiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -13,25 +13,12 @@ object Form7: TForm7
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 24
-    Top = 40
-    Width = 66
-    Height = 19
-    Caption = 'id_supplier'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label2: TLabel
     Left = 24
-    Top = 72
-    Width = 87
+    Top = 32
+    Width = 91
     Height = 19
-    Caption = 'nama_supplier'
+    Caption = 'Nama Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -41,10 +28,10 @@ object Form7: TForm7
   end
   object Label3: TLabel
     Left = 24
-    Top = 104
-    Width = 94
+    Top = 64
+    Width = 97
     Height = 19
-    Caption = 'alamat_supplier'
+    Caption = 'Alamat Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -54,10 +41,10 @@ object Form7: TForm7
   end
   object Label4: TLabel
     Left = 24
-    Top = 136
-    Width = 77
+    Top = 96
+    Width = 95
     Height = 19
-    Caption = 'telp_supplier'
+    Caption = 'Telpon Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -67,10 +54,10 @@ object Form7: TForm7
   end
   object Label5: TLabel
     Left = 24
-    Top = 168
-    Width = 86
+    Top = 128
+    Width = 87
     Height = 19
-    Caption = 'email_supplier'
+    Caption = 'Email Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -78,22 +65,9 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
   end
-  object Label9: TLabel
-    Left = 128
-    Top = 40
-    Width = 4
-    Height = 21
-    Caption = ':'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label10: TLabel
     Left = 128
-    Top = 72
+    Top = 32
     Width = 4
     Height = 21
     Caption = ':'
@@ -106,7 +80,7 @@ object Form7: TForm7
   end
   object Label11: TLabel
     Left = 128
-    Top = 104
+    Top = 64
     Width = 4
     Height = 21
     Caption = ':'
@@ -119,7 +93,7 @@ object Form7: TForm7
   end
   object Label12: TLabel
     Left = 128
-    Top = 136
+    Top = 96
     Width = 4
     Height = 21
     Caption = ':'
@@ -132,7 +106,7 @@ object Form7: TForm7
   end
   object Label13: TLabel
     Left = 128
-    Top = 168
+    Top = 128
     Width = 4
     Height = 21
     Caption = ':'
@@ -143,101 +117,112 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
   end
-  object Edit1: TEdit
-    Left = 144
-    Top = 40
-    Width = 121
-    Height = 21
-    TabOrder = 0
+  object lbl1: TLabel
+    Left = 8
+    Top = 8
+    Width = 76
+    Height = 19
+    Caption = 'SUPPLIER'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Century725 Cn BT'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Edit2: TEdit
     Left = 144
-    Top = 72
-    Width = 121
+    Top = 32
+    Width = 409
     Height = 21
-    TabOrder = 1
+    TabOrder = 0
   end
   object Edit3: TEdit
     Left = 144
-    Top = 104
-    Width = 121
+    Top = 64
+    Width = 409
     Height = 21
-    TabOrder = 2
+    TabOrder = 1
   end
   object Edit4: TEdit
     Left = 144
-    Top = 136
-    Width = 121
+    Top = 96
+    Width = 409
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object Edit5: TEdit
     Left = 144
-    Top = 168
-    Width = 121
+    Top = 128
+    Width = 409
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object btn1: TButton
-    Left = 40
-    Top = 200
+    Left = 32
+    Top = 168
     Width = 75
     Height = 25
-    Caption = 'BATAL'
-    TabOrder = 5
+    Caption = 'BARU'
+    TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 128
-    Top = 200
+    Left = 120
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
-    TabOrder = 6
+    TabOrder = 5
+    OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 216
-    Top = 200
+    Left = 208
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'EDIT'
-    TabOrder = 7
+    TabOrder = 6
   end
   object btn4: TButton
-    Left = 304
-    Top = 200
+    Left = 296
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'HAPUS'
-    TabOrder = 8
+    TabOrder = 7
+    OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 392
-    Top = 200
+    Left = 384
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'BATAL'
-    TabOrder = 9
+    TabOrder = 8
+    OnClick = btn5Click
   end
   object btn6: TButton
-    Left = 480
-    Top = 200
+    Left = 472
+    Top = 168
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
-    TabOrder = 10
+    TabOrder = 9
   end
   object dbgrd1: TDBGrid
-    Left = 24
-    Top = 240
-    Width = 553
-    Height = 129
+    Left = 16
+    Top = 208
+    Width = 545
+    Height = 193
     DataSource = ds1
-    TabOrder = 11
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -252,8 +237,8 @@ object Form7: TForm7
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
-    Left = 24
-    Top = 376
+    Left = 8
+    Top = 360
   end
   object zqry1: TZQuery
     Connection = con1
@@ -261,13 +246,13 @@ object Form7: TForm7
     SQL.Strings = (
       'select * from supplier')
     Params = <>
-    Left = 72
-    Top = 376
+    Left = 56
+    Top = 360
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 120
-    Top = 376
+    Left = 104
+    Top = 360
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -284,8 +269,8 @@ object Form7: TForm7
       'begin'
       ''
       'end.')
-    Left = 168
-    Top = 376
+    Left = 152
+    Top = 360
     Datasets = <>
     Variables = <>
     Style = <>
@@ -294,7 +279,7 @@ object Form7: TForm7
     UserName = 'frxdbdtst1'
     CloseDataSource = False
     DataSource = ds1
-    Left = 224
-    Top = 376
+    Left = 208
+    Top = 360
   end
 end

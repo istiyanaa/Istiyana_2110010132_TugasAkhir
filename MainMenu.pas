@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus;
+  Dialogs, Menus, StdCtrls;
 
 type
   TForm8 = class(TForm)
@@ -18,6 +18,8 @@ type
     mniPelanggan1: TMenuItem;
     mniStok1: TMenuItem;
     mniSupplier1: TMenuItem;
+    Label1: TLabel;
+    mniCLOSE1: TMenuItem;
     procedure mniUser1Click(Sender: TObject);
     procedure mniPembelian1Click(Sender: TObject);
     procedure mniPembelian2Click(Sender: TObject);
@@ -25,6 +27,8 @@ type
     procedure mniPelanggan1Click(Sender: TObject);
     procedure mniStok1Click(Sender: TObject);
     procedure mniSupplier1Click(Sender: TObject);
+    procedure mniLogin1Click(Sender: TObject);
+    procedure mniCLOSE1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,7 +40,8 @@ var
 
 implementation
 
-uses User, Barang, Pembelian, Penjualan, Pelanggan, Stok, Supplier;
+uses User, Barang, Pembelian, Penjualan, Pelanggan, Stok, Supplier,
+  UnitLogin;
 
 {$R *.dfm}
 
@@ -73,6 +78,16 @@ end;
 procedure TForm8.mniSupplier1Click(Sender: TObject);
 begin
 Form7.showmodal;
+end;
+
+procedure TForm8.mniLogin1Click(Sender: TObject);
+begin
+form9.showmodal;
+end;
+
+procedure TForm8.mniCLOSE1Click(Sender: TObject);
+begin
+Close;
 end;
 
 end.

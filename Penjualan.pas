@@ -46,6 +46,7 @@ type
     Label17: TLabel;
     Label18: TLabel;
     Edit9: TEdit;
+    lbl1: TLabel;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);

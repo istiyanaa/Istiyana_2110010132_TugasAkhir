@@ -39,6 +39,7 @@ type
     frxReport1: TfrxReport;
     frxDBDataset1: TfrxDBDataset;
     btn1: TButton;
+    lbl1: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure posisiawal;
     procedure bersih;

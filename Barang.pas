@@ -32,6 +32,7 @@ type
     frxdbdtst1: TfrxDBDataset;
     Edit1: TEdit;
     Label1: TLabel;
+    lbl1: TLabel;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);

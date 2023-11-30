@@ -28,6 +28,7 @@ type
     ds1: TDataSource;
     frxrprt1: TfrxReport;
     frxdbdtst1: TfrxDBDataset;
+    lbl1: TLabel;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);

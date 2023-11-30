@@ -1,10 +1,10 @@
 object Form8: TForm8
-  Left = 201
-  Top = 178
-  Width = 928
-  Height = 480
+  Left = 205
+  Top = 211
+  Width = 481
+  Height = 368
   Caption = 'Aplikasi Toko Pertanian'
-  Color = clBtnFace
+  Color = clActiveBorder
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,14 +14,28 @@ object Form8: TForm8
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 120
+    Width = 367
+    Height = 24
+    Caption = 'SELAMAT DATANG DI TOKO BUTANI'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -21
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object mm1: TMainMenu
-    Left = 56
-    Top = 24
+    Left = 8
+    Top = 8
     object mniLogin1: TMenuItem
-      Caption = 'Login'
+      Caption = 'LOGIN'
+      OnClick = mniLogin1Click
     end
     object mniabel1: TMenuItem
-      Caption = 'Tabel'
+      Caption = 'MENU'
       object mniUser1: TMenuItem
         Caption = 'User'
         OnClick = mniUser1Click
@@ -50,6 +64,10 @@ object Form8: TForm8
         Caption = 'Supplier'
         OnClick = mniSupplier1Click
       end
+    end
+    object mniCLOSE1: TMenuItem
+      Caption = 'CLOSE'
+      OnClick = mniCLOSE1Click
     end
   end
 end

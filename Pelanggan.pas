@@ -34,6 +34,7 @@ type
     btn6: TButton;
     Button1: TButton;
     DBGrid1: TDBGrid;
+    lbl1: TLabel;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -104,7 +105,7 @@ if Edit2.Text = '' then
   else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO user VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'")');
+    zqry1.SQL.Add('INSERT INTO pelanggan VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'")');
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;

@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 115
-  Top = 272
-  Width = 983
+  Left = 253
+  Top = 115
+  Width = 743
   Height = 538
   Caption = 'User'
-  Color = clBtnFace
+  Color = clActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,7 +14,7 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
-    Left = 32
+    Left = 40
     Top = 48
     Width = 94
     Height = 19
@@ -27,7 +27,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 32
+    Left = 40
     Top = 80
     Width = 61
     Height = 19
@@ -40,7 +40,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 32
+    Left = 40
     Top = 112
     Width = 60
     Height = 19
@@ -53,7 +53,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 360
+    Left = 368
     Top = 48
     Width = 83
     Height = 19
@@ -66,7 +66,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 360
+    Left = 368
     Top = 80
     Width = 43
     Height = 19
@@ -79,7 +79,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 360
+    Left = 368
     Top = 112
     Width = 33
     Height = 19
@@ -92,7 +92,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label10: TLabel
-    Left = 136
+    Left = 144
     Top = 48
     Width = 4
     Height = 21
@@ -105,7 +105,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 136
+    Left = 144
     Top = 80
     Width = 4
     Height = 21
@@ -118,7 +118,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 136
+    Left = 144
     Top = 112
     Width = 4
     Height = 21
@@ -131,7 +131,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 456
+    Left = 464
     Top = 48
     Width = 4
     Height = 21
@@ -144,7 +144,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 456
+    Left = 464
     Top = 80
     Width = 4
     Height = 21
@@ -157,7 +157,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 456
+    Left = 464
     Top = 112
     Width = 4
     Height = 21
@@ -169,50 +169,63 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
+  object lbl1: TLabel
+    Left = 8
+    Top = 8
+    Width = 62
+    Height = 25
+    Caption = 'USER'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Century751 BT'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Edit2: TEdit
-    Left = 152
+    Left = 160
     Top = 48
     Width = 185
     Height = 21
     TabOrder = 0
   end
   object Edit3: TEdit
-    Left = 152
+    Left = 160
     Top = 80
     Width = 185
     Height = 21
     TabOrder = 1
   end
   object Edit4: TEdit
-    Left = 152
+    Left = 160
     Top = 112
     Width = 185
     Height = 21
     TabOrder = 2
   end
   object Edit5: TEdit
-    Left = 472
+    Left = 480
     Top = 48
     Width = 185
     Height = 21
     TabOrder = 3
   end
   object Edit6: TEdit
-    Left = 472
+    Left = 480
     Top = 80
     Width = 185
     Height = 21
     TabOrder = 4
   end
   object Edit7: TEdit
-    Left = 472
+    Left = 480
     Top = 112
     Width = 185
     Height = 21
     TabOrder = 5
   end
   object Button1: TButton
-    Left = 48
+    Left = 56
     Top = 152
     Width = 75
     Height = 25
@@ -221,7 +234,7 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 152
+    Left = 160
     Top = 152
     Width = 75
     Height = 25
@@ -230,7 +243,7 @@ object Form1: TForm1
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 256
+    Left = 264
     Top = 152
     Width = 75
     Height = 25
@@ -239,10 +252,10 @@ object Form1: TForm1
     OnClick = Button3Click
   end
   object DBGrid1: TDBGrid
-    Left = 32
+    Left = 40
     Top = 200
     Width = 633
-    Height = 153
+    Height = 241
     DataSource = ds1
     TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
@@ -251,9 +264,51 @@ object Form1: TForm1
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = DBGrid1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_user'
+        Width = 38
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_Lengkap'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'username'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'password'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jenis_kelamin'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'alamat'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'email'
+        Width = 150
+        Visible = True
+      end>
   end
   object Button4: TButton
-    Left = 360
+    Left = 368
     Top = 152
     Width = 75
     Height = 25
@@ -262,7 +317,7 @@ object Form1: TForm1
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 464
+    Left = 472
     Top = 152
     Width = 75
     Height = 25
@@ -271,7 +326,7 @@ object Form1: TForm1
     OnClick = Button5Click
   end
   object btn1: TButton
-    Left = 568
+    Left = 576
     Top = 152
     Width = 75
     Height = 25
@@ -291,7 +346,7 @@ object Form1: TForm1
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
-    Left = 48
+    Left = 56
     Top = 368
   end
   object ZQuery1: TZQuery
@@ -300,12 +355,12 @@ object Form1: TForm1
     SQL.Strings = (
       'select * from user')
     Params = <>
-    Left = 112
+    Left = 120
     Top = 368
   end
   object ds1: TDataSource
     DataSet = ZQuery1
-    Left = 152
+    Left = 160
     Top = 368
   end
   object frxReport1: TfrxReport
@@ -323,7 +378,7 @@ object Form1: TForm1
       'begin'
       ''
       'end.')
-    Left = 200
+    Left = 208
     Top = 368
     Datasets = <>
     Variables = <>
@@ -333,7 +388,7 @@ object Form1: TForm1
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = ZQuery1
-    Left = 272
+    Left = 280
     Top = 368
   end
 end

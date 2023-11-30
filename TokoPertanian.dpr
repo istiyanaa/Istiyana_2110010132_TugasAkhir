@@ -9,7 +9,9 @@ uses
   Pelanggan in 'Pelanggan.pas' {Form5},
   Stok in 'Stok.pas' {Form6},
   Supplier in 'Supplier.pas' {Form7},
-  MainMenu in 'MainMenu.pas' {Form8};
+  MainMenu in 'MainMenu.pas' {Form8},
+  UnitLogin in 'UnitLogin.pas' {Form9},
+  UnitSetelahLogin in 'UnitSetelahLogin.pas' {Form10};
 
 {$R *.res}
 
@@ -23,5 +25,7 @@ begin
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
   Application.Run;
 end.

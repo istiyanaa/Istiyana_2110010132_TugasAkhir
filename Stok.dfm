@@ -1,10 +1,10 @@
 object Form6: TForm6
   Left = 346
   Top = 176
-  Width = 928
+  Width = 630
   Height = 480
   Caption = 'Stok'
-  Color = clBtnFace
+  Color = clInfoBk
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -63,6 +63,19 @@ object Form6: TForm6
     Font.Height = -19
     Font.Name = 'Times New Roman'
     Font.Style = []
+    ParentFont = False
+  end
+  object lbl1: TLabel
+    Left = 16
+    Top = 8
+    Width = 40
+    Height = 19
+    Caption = 'STOK'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Century725 Cn BT'
+    Font.Style = [fsBold]
     ParentFont = False
   end
   object Edit3: TEdit
@@ -136,7 +149,7 @@ object Form6: TForm6
     Left = 24
     Top = 160
     Width = 553
-    Height = 129
+    Height = 177
     DataSource = ds1
     TabOrder = 8
     TitleFont.Charset = DEFAULT_CHARSET

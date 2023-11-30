@@ -1,10 +1,10 @@
 object Form5: TForm5
-  Left = 252
-  Top = 160
-  Width = 928
+  Left = 295
+  Top = 230
+  Width = 655
   Height = 480
   Caption = 'Pelanggan'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,7 +15,7 @@ object Form5: TForm5
   TextHeight = 13
   object Label2: TLabel
     Left = 24
-    Top = 56
+    Top = 32
     Width = 102
     Height = 19
     Caption = 'Nama Pelanggan'
@@ -28,7 +28,7 @@ object Form5: TForm5
   end
   object Label3: TLabel
     Left = 24
-    Top = 88
+    Top = 64
     Width = 106
     Height = 19
     Caption = 'Telpon Pelanggan'
@@ -41,7 +41,7 @@ object Form5: TForm5
   end
   object Label4: TLabel
     Left = 312
-    Top = 56
+    Top = 32
     Width = 98
     Height = 19
     Caption = 'Email Pelanggan'
@@ -54,7 +54,7 @@ object Form5: TForm5
   end
   object Label5: TLabel
     Left = 312
-    Top = 88
+    Top = 64
     Width = 43
     Height = 19
     Caption = 'Alamat'
@@ -67,7 +67,7 @@ object Form5: TForm5
   end
   object Label8: TLabel
     Left = 139
-    Top = 56
+    Top = 32
     Width = 4
     Height = 21
     Caption = ':'
@@ -80,7 +80,7 @@ object Form5: TForm5
   end
   object Label9: TLabel
     Left = 139
-    Top = 88
+    Top = 64
     Width = 4
     Height = 21
     Caption = ':'
@@ -93,7 +93,7 @@ object Form5: TForm5
   end
   object Label10: TLabel
     Left = 425
-    Top = 56
+    Top = 32
     Width = 4
     Height = 21
     Caption = ':'
@@ -106,7 +106,7 @@ object Form5: TForm5
   end
   object Label11: TLabel
     Left = 424
-    Top = 88
+    Top = 64
     Width = 4
     Height = 21
     Caption = ':'
@@ -117,37 +117,50 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
   end
+  object lbl1: TLabel
+    Left = 8
+    Top = 8
+    Width = 92
+    Height = 19
+    Caption = 'PELANGGAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Century725 Cn BT'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Edit2: TEdit
     Left = 152
-    Top = 56
+    Top = 32
     Width = 153
     Height = 21
     TabOrder = 0
   end
   object Edit3: TEdit
     Left = 152
-    Top = 88
+    Top = 64
     Width = 153
     Height = 21
     TabOrder = 1
   end
   object Edit4: TEdit
     Left = 440
-    Top = 56
+    Top = 32
     Width = 153
     Height = 21
     TabOrder = 2
   end
   object Edit5: TEdit
     Left = 440
-    Top = 88
+    Top = 64
     Width = 153
     Height = 21
     TabOrder = 3
   end
   object btn1: TButton
     Left = 48
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -156,7 +169,7 @@ object Form5: TForm5
   end
   object btn2: TButton
     Left = 136
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -165,7 +178,7 @@ object Form5: TForm5
   end
   object btn3: TButton
     Left = 224
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -174,7 +187,7 @@ object Form5: TForm5
   end
   object btn4: TButton
     Left = 312
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -183,7 +196,7 @@ object Form5: TForm5
   end
   object btn6: TButton
     Left = 496
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -191,7 +204,7 @@ object Form5: TForm5
   end
   object Button1: TButton
     Left = 408
-    Top = 128
+    Top = 104
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -200,9 +213,9 @@ object Form5: TForm5
   end
   object DBGrid1: TDBGrid
     Left = 24
-    Top = 168
+    Top = 144
     Width = 577
-    Height = 120
+    Height = 193
     DataSource = ds1
     TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
@@ -226,7 +239,7 @@ object Form5: TForm5
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
     Left = 16
-    Top = 304
+    Top = 280
   end
   object zqry1: TZQuery
     Connection = con1
@@ -235,12 +248,12 @@ object Form5: TForm5
       'select * from pelanggan')
     Params = <>
     Left = 64
-    Top = 304
+    Top = 280
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 112
-    Top = 304
+    Top = 280
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -258,7 +271,7 @@ object Form5: TForm5
       ''
       'end.')
     Left = 160
-    Top = 304
+    Top = 280
     Datasets = <>
     Variables = <>
     Style = <>
@@ -268,6 +281,6 @@ object Form5: TForm5
     CloseDataSource = False
     DataSource = ds1
     Left = 216
-    Top = 304
+    Top = 280
   end
 end

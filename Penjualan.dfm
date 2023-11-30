@@ -1,10 +1,10 @@
 object Form4: TForm4
-  Left = 187
-  Top = 160
-  Width = 928
+  Left = 377
+  Top = 161
+  Width = 622
   Height = 480
   Caption = 'Penjualan'
-  Color = clBtnFace
+  Color = clGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -221,6 +221,19 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
+  object lbl1: TLabel
+    Left = 8
+    Top = 8
+    Width = 90
+    Height = 19
+    Caption = 'PENJUALAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Century725 Cn BT'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Edit2: TEdit
     Left = 136
     Top = 40
@@ -272,7 +285,7 @@ object Form4: TForm4
   end
   object btn1: TButton
     Left = 40
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -281,7 +294,7 @@ object Form4: TForm4
   end
   object btn2: TButton
     Left = 128
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -290,7 +303,7 @@ object Form4: TForm4
   end
   object btn3: TButton
     Left = 216
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -299,7 +312,7 @@ object Form4: TForm4
   end
   object btn4: TButton
     Left = 304
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -308,7 +321,7 @@ object Form4: TForm4
   end
   object btn5: TButton
     Left = 392
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -317,7 +330,7 @@ object Form4: TForm4
   end
   object btn6: TButton
     Left = 480
-    Top = 200
+    Top = 176
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -325,9 +338,9 @@ object Form4: TForm4
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 240
+    Top = 216
     Width = 553
-    Height = 129
+    Height = 185
     DataSource = ds1
     TabOrder = 13
     TitleFont.Charset = DEFAULT_CHARSET
@@ -358,7 +371,7 @@ object Form4: TForm4
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
     Left = 24
-    Top = 376
+    Top = 352
   end
   object zqry1: TZQuery
     Connection = con1
@@ -367,12 +380,12 @@ object Form4: TForm4
       'select * from penjualan')
     Params = <>
     Left = 72
-    Top = 376
+    Top = 352
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 120
-    Top = 376
+    Top = 352
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -390,7 +403,7 @@ object Form4: TForm4
       ''
       'end.')
     Left = 168
-    Top = 376
+    Top = 352
     Datasets = <>
     Variables = <>
     Style = <>
@@ -400,6 +413,6 @@ object Form4: TForm4
     CloseDataSource = False
     DataSource = ds1
     Left = 224
-    Top = 376
+    Top = 352
   end
 end
