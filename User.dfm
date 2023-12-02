@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 253
-  Top = 115
+  Left = 298
+  Top = 128
   Width = 743
   Height = 538
   Caption = 'User'
@@ -53,8 +53,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 368
-    Top = 48
+    Left = 360
+    Top = 16
     Width = 83
     Height = 19
     Caption = 'Jenis Kelamin'
@@ -66,8 +66,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 368
-    Top = 80
+    Left = 360
+    Top = 48
     Width = 43
     Height = 19
     Caption = 'Alamat'
@@ -79,8 +79,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 368
-    Top = 112
+    Left = 360
+    Top = 80
     Width = 33
     Height = 19
     Caption = 'Email'
@@ -131,8 +131,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 464
-    Top = 48
+    Left = 456
+    Top = 16
     Width = 4
     Height = 21
     Caption = ':'
@@ -144,8 +144,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 464
-    Top = 80
+    Left = 456
+    Top = 48
     Width = 4
     Height = 21
     Caption = ':'
@@ -157,8 +157,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 464
-    Top = 112
+    Left = 456
+    Top = 80
     Width = 4
     Height = 21
     Caption = ':'
@@ -169,17 +169,30 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object lbl1: TLabel
-    Left = 8
-    Top = 8
-    Width = 62
-    Height = 25
-    Caption = 'USER'
+  object Label1: TLabel
+    Left = 40
+    Top = 16
+    Width = 46
+    Height = 19
+    Caption = 'Id User'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -21
-    Font.Name = 'Century751 BT'
-    Font.Style = [fsBold]
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 144
+    Top = 16
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
     ParentFont = False
   end
   object Edit2: TEdit
@@ -204,22 +217,22 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Edit5: TEdit
-    Left = 480
-    Top = 48
+    Left = 472
+    Top = 16
     Width = 185
     Height = 21
     TabOrder = 3
   end
   object Edit6: TEdit
-    Left = 480
-    Top = 80
+    Left = 472
+    Top = 48
     Width = 185
     Height = 21
     TabOrder = 4
   end
   object Edit7: TEdit
-    Left = 480
-    Top = 112
+    Left = 472
+    Top = 80
     Width = 185
     Height = 21
     TabOrder = 5
@@ -333,6 +346,13 @@ object Form1: TForm1
     Caption = 'LAPORAN'
     TabOrder = 12
   end
+  object Edit1: TEdit
+    Left = 160
+    Top = 16
+    Width = 185
+    Height = 21
+    TabOrder = 13
+  end
   object ZConnection1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -340,7 +360,7 @@ object Form1: TForm1
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'pertanian_db'
+    Database = 'toko_pertanian'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 

@@ -1,7 +1,7 @@
 object Form7: TForm7
-  Left = 253
-  Top = 151
-  Width = 606
+  Left = 290
+  Top = 174
+  Width = 690
   Height = 480
   Caption = 'Supplier'
   Color = clGradientInactiveCaption
@@ -14,47 +14,8 @@ object Form7: TForm7
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
-    Left = 24
-    Top = 32
-    Width = 91
-    Height = 19
-    Caption = 'Nama Supplier'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label3: TLabel
-    Left = 24
-    Top = 64
-    Width = 97
-    Height = 19
-    Caption = 'Alamat Supplier'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label4: TLabel
-    Left = 24
-    Top = 96
-    Width = 95
-    Height = 19
-    Caption = 'Telpon Supplier'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Times New Roman'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label5: TLabel
-    Left = 24
-    Top = 128
+    Left = 328
+    Top = 8
     Width = 87
     Height = 19
     Caption = 'Email Supplier'
@@ -65,9 +26,48 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
   end
+  object Label3: TLabel
+    Left = 328
+    Top = 40
+    Width = 88
+    Height = 19
+    Caption = 'Jumlah Barang'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 328
+    Top = 72
+    Width = 82
+    Height = 19
+    Caption = 'Harga Satuan'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 328
+    Top = 104
+    Width = 82
+    Height = 19
+    Caption = 'Jumlah Harga'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
   object Label10: TLabel
-    Left = 128
-    Top = 32
+    Left = 432
+    Top = 8
     Width = 4
     Height = 21
     Caption = ':'
@@ -79,8 +79,8 @@ object Form7: TForm7
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 128
-    Top = 64
+    Left = 432
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -92,8 +92,8 @@ object Form7: TForm7
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 128
-    Top = 96
+    Left = 432
+    Top = 72
     Width = 4
     Height = 21
     Caption = ':'
@@ -105,8 +105,8 @@ object Form7: TForm7
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 128
-    Top = 128
+    Left = 432
+    Top = 104
     Width = 4
     Height = 21
     Caption = ':'
@@ -117,50 +117,141 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
   end
-  object lbl1: TLabel
-    Left = 8
+  object Label1: TLabel
+    Left = 16
     Top = 8
-    Width = 76
+    Width = 67
     Height = 19
-    Caption = 'SUPPLIER'
+    Caption = 'Id Supplier'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Century725 Cn BT'
-    Font.Style = [fsBold]
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Top = 40
+    Width = 91
+    Height = 19
+    Caption = 'Nama Supplier'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Top = 72
+    Width = 97
+    Height = 19
+    Caption = 'Alamat Supplier'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Top = 104
+    Width = 95
+    Height = 19
+    Caption = 'Telpon Supplier'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 120
+    Top = 8
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 120
+    Top = 40
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label15: TLabel
+    Left = 120
+    Top = 72
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 120
+    Top = 104
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
     ParentFont = False
   end
   object Edit2: TEdit
-    Left = 144
-    Top = 32
-    Width = 409
+    Left = 128
+    Top = 40
+    Width = 185
     Height = 21
     TabOrder = 0
   end
   object Edit3: TEdit
-    Left = 144
-    Top = 64
-    Width = 409
+    Left = 128
+    Top = 72
+    Width = 185
     Height = 21
     TabOrder = 1
   end
   object Edit4: TEdit
-    Left = 144
-    Top = 96
-    Width = 409
+    Left = 128
+    Top = 104
+    Width = 185
     Height = 21
     TabOrder = 2
   end
   object Edit5: TEdit
-    Left = 144
-    Top = 128
-    Width = 409
+    Left = 440
+    Top = 8
+    Width = 185
     Height = 21
     TabOrder = 3
   end
   object btn1: TButton
-    Left = 32
-    Top = 168
+    Left = 88
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -168,8 +259,8 @@ object Form7: TForm7
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 120
-    Top = 168
+    Left = 176
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -177,16 +268,17 @@ object Form7: TForm7
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 208
-    Top = 168
+    Left = 264
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'EDIT'
     TabOrder = 6
+    OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 296
-    Top = 168
+    Left = 352
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -194,8 +286,8 @@ object Form7: TForm7
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 384
-    Top = 168
+    Left = 440
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -203,8 +295,8 @@ object Form7: TForm7
     OnClick = btn5Click
   end
   object btn6: TButton
-    Left = 472
-    Top = 168
+    Left = 528
+    Top = 144
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -212,8 +304,8 @@ object Form7: TForm7
   end
   object dbgrd1: TDBGrid
     Left = 16
-    Top = 208
-    Width = 545
+    Top = 184
+    Width = 625
     Height = 193
     DataSource = ds1
     TabOrder = 10
@@ -224,6 +316,34 @@ object Form7: TForm7
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
+  object Edit1: TEdit
+    Left = 128
+    Top = 8
+    Width = 185
+    Height = 21
+    TabOrder = 11
+  end
+  object Edit6: TEdit
+    Left = 440
+    Top = 40
+    Width = 185
+    Height = 21
+    TabOrder = 12
+  end
+  object Edit7: TEdit
+    Left = 440
+    Top = 72
+    Width = 185
+    Height = 21
+    TabOrder = 13
+  end
+  object Edit8: TEdit
+    Left = 440
+    Top = 104
+    Width = 185
+    Height = 21
+    TabOrder = 14
+  end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -231,14 +351,14 @@ object Form7: TForm7
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'pertanian_db'
+    Database = 'toko_pertanian'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
-      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
-      'll'
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\Istiyana\libmysq' +
+      'l.dll'
     Left = 8
-    Top = 360
+    Top = 336
   end
   object zqry1: TZQuery
     Connection = con1
@@ -247,12 +367,12 @@ object Form7: TForm7
       'select * from supplier')
     Params = <>
     Left = 56
-    Top = 360
+    Top = 336
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 104
-    Top = 360
+    Top = 336
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -270,7 +390,7 @@ object Form7: TForm7
       ''
       'end.')
     Left = 152
-    Top = 360
+    Top = 336
     Datasets = <>
     Variables = <>
     Style = <>
@@ -280,6 +400,6 @@ object Form7: TForm7
     CloseDataSource = False
     DataSource = ds1
     Left = 208
-    Top = 360
+    Top = 336
   end
 end

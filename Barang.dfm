@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 254
   Top = 167
   Width = 658
-  Height = 480
+  Height = 422
   Caption = 'Barang'
   Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
@@ -27,8 +27,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 40
-    Top = 104
+    Left = 328
+    Top = 8
     Width = 41
     Height = 19
     Caption = 'Satuan'
@@ -67,10 +67,10 @@ object Form2: TForm2
   end
   object Label1: TLabel
     Left = 40
-    Top = 40
-    Width = 49
+    Top = 8
+    Width = 60
     Height = 19
-    Caption = 'ID Stok'
+    Caption = 'Id Barang'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -78,30 +78,30 @@ object Form2: TForm2
     Font.Style = []
     ParentFont = False
   end
-  object lbl1: TLabel
-    Left = 8
-    Top = 8
-    Width = 72
-    Height = 22
-    Caption = 'BARANG'
+  object Label2: TLabel
+    Left = 40
+    Top = 40
+    Width = 46
+    Height = 19
+    Caption = 'Id Stok'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -19
-    Font.Name = 'Century725 Cn BT'
-    Font.Style = [fsBold]
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
     ParentFont = False
   end
   object Edit3: TEdit
-    Left = 144
+    Left = 136
     Top = 72
-    Width = 153
+    Width = 169
     Height = 21
     TabOrder = 0
   end
   object Edit4: TEdit
-    Left = 144
-    Top = 104
-    Width = 153
+    Left = 416
+    Top = 8
+    Width = 161
     Height = 21
     TabOrder = 1
   end
@@ -121,7 +121,7 @@ object Form2: TForm2
   end
   object btn1: TButton
     Left = 40
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -130,7 +130,7 @@ object Form2: TForm2
   end
   object btn2: TButton
     Left = 136
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -139,7 +139,7 @@ object Form2: TForm2
   end
   object btn3: TButton
     Left = 232
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -148,7 +148,7 @@ object Form2: TForm2
   end
   object btn4: TButton
     Left = 320
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -157,7 +157,7 @@ object Form2: TForm2
   end
   object btn5: TButton
     Left = 408
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -166,7 +166,7 @@ object Form2: TForm2
   end
   object btn6: TButton
     Left = 504
-    Top = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -174,7 +174,7 @@ object Form2: TForm2
   end
   object dbgrd1: TDBGrid
     Left = 40
-    Top = 184
+    Top = 152
     Width = 553
     Height = 201
     DataSource = ds1
@@ -187,11 +187,18 @@ object Form2: TForm2
     OnCellClick = dbgrd1CellClick
   end
   object Edit1: TEdit
-    Left = 144
-    Top = 40
-    Width = 153
+    Left = 136
+    Top = 8
+    Width = 169
     Height = 21
     TabOrder = 11
+  end
+  object Edit2: TEdit
+    Left = 136
+    Top = 40
+    Width = 169
+    Height = 21
+    TabOrder = 12
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -200,14 +207,14 @@ object Form2: TForm2
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'pertanian_db'
+    Database = 'toko_pertanian'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
     Left = 48
-    Top = 336
+    Top = 304
   end
   object zqry1: TZQuery
     Connection = con1
@@ -216,12 +223,12 @@ object Form2: TForm2
       'select * from barang')
     Params = <>
     Left = 96
-    Top = 336
+    Top = 304
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 144
-    Top = 336
+    Top = 304
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -239,7 +246,7 @@ object Form2: TForm2
       ''
       'end.')
     Left = 192
-    Top = 336
+    Top = 304
     Datasets = <>
     Variables = <>
     Style = <>
@@ -249,6 +256,6 @@ object Form2: TForm2
     CloseDataSource = False
     DataSource = ds1
     Left = 248
-    Top = 336
+    Top = 304
   end
 end

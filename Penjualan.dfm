@@ -16,11 +16,11 @@ object Form4: TForm4
   object Label2: TLabel
     Left = 24
     Top = 40
-    Width = 81
+    Width = 78
     Height = 19
-    Caption = 'ID Pelanggan'
+    Caption = 'Id Pelanggan'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -29,11 +29,11 @@ object Form4: TForm4
   object Label3: TLabel
     Left = 24
     Top = 72
-    Width = 63
+    Width = 60
     Height = 19
-    Caption = 'ID Barang'
+    Caption = 'Id Barang'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -42,11 +42,11 @@ object Form4: TForm4
   object Label4: TLabel
     Left = 24
     Top = 104
-    Width = 49
+    Width = 46
     Height = 19
-    Caption = 'ID User'
+    Caption = 'Id User'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -59,7 +59,7 @@ object Form4: TForm4
     Height = 19
     Caption = 'No Faktur'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -67,12 +67,12 @@ object Form4: TForm4
   end
   object Label6: TLabel
     Left = 304
-    Top = 40
+    Top = 8
     Width = 90
     Height = 19
     Caption = 'Tanggal Faktur'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -80,12 +80,12 @@ object Form4: TForm4
   end
   object Label7: TLabel
     Left = 304
-    Top = 72
+    Top = 40
     Width = 64
     Height = 19
     Caption = 'Harga Beli'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -93,12 +93,12 @@ object Form4: TForm4
   end
   object Label8: TLabel
     Left = 304
-    Top = 104
+    Top = 72
     Width = 64
     Height = 19
     Caption = 'Harga Jual'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -107,12 +107,12 @@ object Form4: TForm4
   object Label10: TLabel
     Left = 120
     Top = 40
-    Width = 4
-    Height = 21
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
@@ -120,12 +120,12 @@ object Form4: TForm4
   object Label11: TLabel
     Left = 120
     Top = 72
-    Width = 4
-    Height = 21
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
@@ -133,12 +133,12 @@ object Form4: TForm4
   object Label12: TLabel
     Left = 120
     Top = 104
-    Width = 4
-    Height = 21
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
@@ -146,63 +146,63 @@ object Form4: TForm4
   object Label13: TLabel
     Left = 120
     Top = 136
-    Width = 4
-    Height = 21
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
   object Label14: TLabel
     Left = 400
-    Top = 40
-    Width = 4
-    Height = 21
+    Top = 8
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
   object Label15: TLabel
     Left = 400
-    Top = 72
-    Width = 4
-    Height = 21
+    Top = 40
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
   object Label16: TLabel
     Left = 400
-    Top = 104
-    Width = 4
-    Height = 21
+    Top = 72
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
   object Label17: TLabel
     Left = 304
-    Top = 136
+    Top = 104
     Width = 91
     Height = 19
     Caption = 'Banyak Keluar'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
@@ -210,77 +210,132 @@ object Form4: TForm4
   end
   object Label18: TLabel
     Left = 400
-    Top = 136
-    Width = 4
-    Height = 21
+    Top = 104
+    Width = 3
+    Height = 19
     Caption = ':'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Times New Roman'
     Font.Style = []
     ParentFont = False
   end
-  object lbl1: TLabel
-    Left = 8
+  object Label1: TLabel
+    Left = 24
     Top = 8
-    Width = 90
+    Width = 75
     Height = 19
-    Caption = 'PENJUALAN'
+    Caption = 'Id Penjualan'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWhite
     Font.Height = -16
-    Font.Name = 'Century725 Cn BT'
-    Font.Style = [fsBold]
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 120
+    Top = 8
+    Width = 3
+    Height = 19
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
     ParentFont = False
   end
   object Edit2: TEdit
     Left = 136
     Top = 40
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object Edit3: TEdit
     Left = 136
     Top = 72
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object Edit4: TEdit
     Left = 136
     Top = 104
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object Edit5: TEdit
     Left = 136
     Top = 136
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object Edit6: TEdit
     Left = 416
-    Top = 40
+    Top = 8
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
   end
   object Edit7: TEdit
     Left = 416
-    Top = 72
+    Top = 40
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
   object Edit8: TEdit
     Left = 416
-    Top = 104
+    Top = 72
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
   end
   object btn1: TButton
@@ -352,10 +407,29 @@ object Form4: TForm4
   end
   object Edit9: TEdit
     Left = 416
-    Top = 136
+    Top = 104
     Width = 153
-    Height = 21
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 14
+  end
+  object Edit1: TEdit
+    Left = 136
+    Top = 8
+    Width = 153
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 15
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -364,7 +438,7 @@ object Form4: TForm4
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'pertanian_db'
+    Database = 'toko_pertanian'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 

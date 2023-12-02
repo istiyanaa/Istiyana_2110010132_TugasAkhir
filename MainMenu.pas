@@ -9,7 +9,6 @@ uses
 type
   TForm8 = class(TForm)
     mm1: TMainMenu;
-    mniLogin1: TMenuItem;
     mniabel1: TMenuItem;
     mniUser1: TMenuItem;
     mniPembelian1: TMenuItem;
@@ -18,8 +17,9 @@ type
     mniPelanggan1: TMenuItem;
     mniStok1: TMenuItem;
     mniSupplier1: TMenuItem;
-    Label1: TLabel;
     mniCLOSE1: TMenuItem;
+    Label1: TLabel;
+    mniCLOSE2: TMenuItem;
     procedure mniUser1Click(Sender: TObject);
     procedure mniPembelian1Click(Sender: TObject);
     procedure mniPembelian2Click(Sender: TObject);
@@ -29,6 +29,7 @@ type
     procedure mniSupplier1Click(Sender: TObject);
     procedure mniLogin1Click(Sender: TObject);
     procedure mniCLOSE1Click(Sender: TObject);
+    procedure mniCLOSE2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,6 +87,11 @@ form9.showmodal;
 end;
 
 procedure TForm8.mniCLOSE1Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm8.mniCLOSE2Click(Sender: TObject);
 begin
 Close;
 end;

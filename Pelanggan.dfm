@@ -1,8 +1,8 @@
 object Form5: TForm5
   Left = 295
   Top = 230
-  Width = 655
-  Height = 480
+  Width = 679
+  Height = 407
   Caption = 'Pelanggan'
   Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
@@ -15,7 +15,7 @@ object Form5: TForm5
   TextHeight = 13
   object Label2: TLabel
     Left = 24
-    Top = 32
+    Top = 40
     Width = 102
     Height = 19
     Caption = 'Nama Pelanggan'
@@ -28,7 +28,7 @@ object Form5: TForm5
   end
   object Label3: TLabel
     Left = 24
-    Top = 64
+    Top = 72
     Width = 106
     Height = 19
     Caption = 'Telpon Pelanggan'
@@ -40,8 +40,8 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 312
-    Top = 32
+    Left = 320
+    Top = 8
     Width = 98
     Height = 19
     Caption = 'Email Pelanggan'
@@ -53,8 +53,8 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 312
-    Top = 64
+    Left = 320
+    Top = 40
     Width = 43
     Height = 19
     Caption = 'Alamat'
@@ -67,7 +67,7 @@ object Form5: TForm5
   end
   object Label8: TLabel
     Left = 139
-    Top = 32
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -80,7 +80,7 @@ object Form5: TForm5
   end
   object Label9: TLabel
     Left = 139
-    Top = 64
+    Top = 72
     Width = 4
     Height = 21
     Caption = ':'
@@ -92,8 +92,8 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label10: TLabel
-    Left = 425
-    Top = 32
+    Left = 433
+    Top = 8
     Width = 4
     Height = 21
     Caption = ':'
@@ -105,8 +105,8 @@ object Form5: TForm5
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 424
-    Top = 64
+    Left = 432
+    Top = 40
     Width = 4
     Height = 21
     Caption = ':'
@@ -117,50 +117,63 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
   end
-  object lbl1: TLabel
-    Left = 8
+  object Label1: TLabel
+    Left = 24
     Top = 8
-    Width = 92
+    Width = 78
     Height = 19
-    Caption = 'PELANGGAN'
+    Caption = 'Id Pelanggan'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Century725 Cn BT'
-    Font.Style = [fsBold]
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 139
+    Top = 8
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
     ParentFont = False
   end
   object Edit2: TEdit
     Left = 152
-    Top = 32
+    Top = 40
     Width = 153
     Height = 21
     TabOrder = 0
   end
   object Edit3: TEdit
     Left = 152
-    Top = 64
+    Top = 72
     Width = 153
     Height = 21
     TabOrder = 1
   end
   object Edit4: TEdit
-    Left = 440
-    Top = 32
+    Left = 448
+    Top = 8
     Width = 153
     Height = 21
     TabOrder = 2
   end
   object Edit5: TEdit
-    Left = 440
-    Top = 64
+    Left = 448
+    Top = 40
     Width = 153
     Height = 21
     TabOrder = 3
   end
   object btn1: TButton
-    Left = 48
-    Top = 104
+    Left = 56
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -168,8 +181,8 @@ object Form5: TForm5
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 136
-    Top = 104
+    Left = 144
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -177,8 +190,8 @@ object Form5: TForm5
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 224
-    Top = 104
+    Left = 232
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -186,8 +199,8 @@ object Form5: TForm5
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 312
-    Top = 104
+    Left = 320
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -195,16 +208,16 @@ object Form5: TForm5
     OnClick = btn4Click
   end
   object btn6: TButton
-    Left = 496
-    Top = 104
+    Left = 504
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
     TabOrder = 8
   end
   object Button1: TButton
-    Left = 408
-    Top = 104
+    Left = 416
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -212,8 +225,8 @@ object Form5: TForm5
     OnClick = Button1Click
   end
   object DBGrid1: TDBGrid
-    Left = 24
-    Top = 144
+    Left = 32
+    Top = 152
     Width = 577
     Height = 193
     DataSource = ds1
@@ -225,6 +238,13 @@ object Form5: TForm5
     TitleFont.Style = []
     OnCellClick = DBGrid1CellClick
   end
+  object Edit1: TEdit
+    Left = 152
+    Top = 8
+    Width = 153
+    Height = 21
+    TabOrder = 11
+  end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -232,7 +252,7 @@ object Form5: TForm5
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'pertanian_db'
+    Database = 'toko_pertanian'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 

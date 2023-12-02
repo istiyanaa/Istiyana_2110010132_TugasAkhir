@@ -47,7 +47,9 @@ type
     Label18: TLabel;
     Edit9: TEdit;
     Label19: TLabel;
-    lbl1: TLabel;
+    Label1: TLabel;
+    Label9: TLabel;
+    Edit1: TEdit;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -71,6 +73,7 @@ implementation
 
 procedure TForm3.bersih;
 begin
+  Edit1.Clear;
   Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
@@ -89,6 +92,7 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= True;
+  Edit1.Enabled:= True;
   Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
@@ -108,6 +112,7 @@ begin
   btn4.Enabled:= False;
   btn5.Enabled:= False;
   Edit2.Enabled:= False;
+  Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
   Edit5.Enabled:= False;
@@ -119,27 +124,50 @@ end;
 
 procedure TForm3.btn3Click(Sender: TObject);
 var
-  idUser: string;
+  idPembelianBeforeEdit: string;
+  idBarangBeforeEdit: string;
+  idSupplierBeforeEdit: string;
+  idUserBeforeEdit: string;
+  noFakturBeforeEdit: string;
+  tglFakturBeforeEdit: string;
+  hargaBeliBeforeEdit: string;
+  hargaJualBeforeEdit: string;
+  banyakKeluarBeforeEdit: string;
 begin
-  if (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or (Edit7.Text = '') or (Edit8.Text = '') or (Edit9.Text = '') then
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') or
+     (Edit6.Text = '') or (Edit7.Text = '') or (Edit8.Text = '') or (Edit9.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
   else
   begin
-    // Pastikan Anda memperoleh ID saat ini sebelum melakukan Edit
-    idUser := zqry1.FieldByName('id_pembelian').AsString;
+    // Simpan nilai sebelumnya sebelum Edit dilakukan
+    idPembelianBeforeEdit := zqry1.FieldByName('id_pembelian').AsString;
+    idBarangBeforeEdit := zqry1.FieldByName('id_barang').AsString;
+    idSupplierBeforeEdit := zqry1.FieldByName('id_supplier').AsString;
+    idUserBeforeEdit := zqry1.FieldByName('id_user').AsString;
+    noFakturBeforeEdit := zqry1.FieldByName('nofaktur').AsString;
+    tglFakturBeforeEdit := zqry1.FieldByName('tglfaktur').AsString;
+    hargaBeliBeforeEdit := zqry1.FieldByName('harga_beli').AsString;
+    hargaJualBeforeEdit := zqry1.FieldByName('harga_jual').AsString;
+    banyakKeluarBeforeEdit := zqry1.FieldByName('banyak_keluar').AsString;
 
-    // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit2.Text = idUser then
+    // Periksa apakah ada perubahan sebelum melakukan Edit
+    if (Edit1.Text <> idPembelianBeforeEdit) or (Edit2.Text <> idBarangBeforeEdit) or
+       (Edit3.Text <> idSupplierBeforeEdit) or (Edit4.Text <> idUserBeforeEdit) or
+       (Edit5.Text <> noFakturBeforeEdit) or (Edit6.Text <> tglFakturBeforeEdit) or
+       (Edit7.Text <> hargaBeliBeforeEdit) or (Edit8.Text <> hargaJualBeforeEdit) or
+       (Edit9.Text <> banyakKeluarBeforeEdit) then
     begin
+      // Lakukan Edit
       zqry1.Edit;
+      zqry1.FieldByName('id_pembelian').AsString := Edit1.Text;
       zqry1.FieldByName('id_barang').AsString := Edit2.Text;
       zqry1.FieldByName('id_supplier').AsString := Edit3.Text;
-      zqry1.FieldByName('id_user').AsString :=Edit4.Text;
+      zqry1.FieldByName('id_user').AsString := Edit4.Text;
       zqry1.FieldByName('nofaktur').AsString := Edit5.Text;
       zqry1.FieldByName('tglfaktur').AsString := Edit6.Text;
-      zqry1.FieldByName('harga_beli').AsString :=Edit7.Text;
+      zqry1.FieldByName('harga_beli').AsString := Edit7.Text;
       zqry1.FieldByName('harga_jual').AsString := Edit8.Text;
       zqry1.FieldByName('banyak_keluar').AsString := Edit9.Text;
       zqry1.Post;
@@ -149,11 +177,10 @@ begin
     end
     else
     begin
-      ShowMessage('Perubahan ID tidak diizinkan');
+      ShowMessage('Data tidak ada perubahan');
       posisiawal;
     end;
   end;
-
 end;
 
 procedure TForm3.btn4Click(Sender: TObject);
@@ -187,19 +214,25 @@ end;
 
 procedure TForm3.dbgrd1CellClick(Column: TColumn);
 begin
+  Edit1.Text := zqry1.FieldByName('id_pembelian').AsString;
   Edit2.Text := zqry1.FieldByName('id_barang').AsString;
   Edit3.Text := zqry1.FieldByName('id_supplier').AsString;
   Edit4.Text := zqry1.FieldByName('id_user').AsString;
   Edit5.Text := zqry1.FieldByName('nofaktur').AsString;
-  Edit6.Text := zqry1.FieldByName('tgl_faktur').AsString;
+  Edit6.Text := zqry1.FieldByName('tglfaktur').AsString;
   Edit7.Text := zqry1.FieldByName('harga_beli').AsString;
   Edit8.Text := zqry1.FieldByName('harga_jual').AsString;
   Edit9.Text := zqry1.FieldByName('banyak_keluar').AsString;
 
+  Edit1.Enabled := True;
   Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
   Edit5.Enabled := True;
+  Edit6.Enabled := True;
+  Edit7.Enabled := True;
+  Edit8.Enabled := True;
+  Edit9.Enabled := True;
 
   btn1.Enabled := False;
   btn2.Enabled := True;
@@ -210,6 +243,8 @@ end;
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin
+if Edit1.Text = '' then
+    ShowMessage('ID Pembelian tidak boleh kosong!');
 if Edit2.Text = '' then
 begin
     ShowMessage('ID Barang tidak boleh kosong!');
@@ -244,7 +279,7 @@ begin
 end else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO pembelian VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'","'+Edit6.Text+'","'+Edit7.Text+'","'+Edit8.Text+'","'+Edit9.Text+'")');
+    zqry1.SQL.Add('INSERT INTO pembelian VALUES ("'+Edit1.Text+'", "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'","'+Edit6.Text+'","'+Edit7.Text+'","'+Edit8.Text+'","'+Edit9.Text+'")');
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;

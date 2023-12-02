@@ -34,7 +34,9 @@ type
     btn6: TButton;
     Button1: TButton;
     DBGrid1: TDBGrid;
-    lbl1: TLabel;
+    Label1: TLabel;
+    Label6: TLabel;
+    Edit1: TEdit;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -58,6 +60,7 @@ implementation
 
 procedure TForm5.bersih;
 begin
+  Edit1.Clear;
   Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
@@ -72,6 +75,7 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   Button1.Enabled:= True;
+  Edit1.Enabled:= True;
   Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
@@ -86,6 +90,7 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   Button1.Enabled:= False;
+  Edit1.Enabled:= False;
   Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
@@ -94,8 +99,10 @@ end;
 
 procedure TForm5.btn2Click(Sender: TObject);
 begin
-if Edit2.Text = '' then
-    ShowMessage('Nama Pelanggan tidak boleh kosong!')
+if Edit1.Text = '' then
+    ShowMessage('Id Pelanggan tidak boleh kosong!')
+  else if Edit2.Text = '' then
+    ShowMessage('Nama Lengkap tidak boleh kosong!')
   else if Edit3.Text = '' then
     ShowMessage('Telepon Pelanggan tidak boleh kosong!')
   else if Edit4.Text = '' then
@@ -105,7 +112,7 @@ if Edit2.Text = '' then
   else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO pelanggan VALUES (null, "'+Edit2.Text+'", "'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'")');
+    zqry1.SQL.Add('INSERT INTO pelanggan VALUES ("'+Edit1.Text+'","'+Edit2.Text+'","'+Edit3.Text+'","'+Edit4.Text+'","'+Edit5.Text+'")');
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;
@@ -118,35 +125,49 @@ end;
 
 procedure TForm5.btn3Click(Sender: TObject);
 var
-  idUser: string;
+  idUserBeforeEdit: string;
+  idPelangganBeforeEdit: string;
+  namaLengkapBeforeEdit: string;
+  telpPelangganBeforeEdit: string;
+  emailPelangganBeforeEdit: string;
+  alamatBeforeEdit: string;
 begin
-  if (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') then
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
+    Exit;
+  end;
+
+  idUserBeforeEdit := zqry1.FieldByName('id_pelanggan').AsString;
+
+  // Simpan nilai sebelumnya untuk setiap kolom
+  idPelangganBeforeEdit := zqry1.FieldByName('id_pelanggan').AsString;
+  namaLengkapBeforeEdit := zqry1.FieldByName('nama_lengkap').AsString;
+  telpPelangganBeforeEdit := zqry1.FieldByName('telp_pelanggan').AsString;
+  emailPelangganBeforeEdit := zqry1.FieldByName('email_pelanggan').AsString;
+  alamatBeforeEdit := zqry1.FieldByName('alamat').AsString;
+
+  if (Edit1.Text <> idPelangganBeforeEdit) or
+     (Edit2.Text <> namaLengkapBeforeEdit) or
+     (Edit3.Text <> telpPelangganBeforeEdit) or
+     (Edit4.Text <> emailPelangganBeforeEdit) or
+     (Edit5.Text <> alamatBeforeEdit) then
+  begin
+    zqry1.Edit;
+    zqry1.FieldByName('id_pelanggan').AsString := Edit1.Text;
+    zqry1.FieldByName('nama_lengkap').AsString := Edit2.Text;
+    zqry1.FieldByName('telp_pelanggan').AsString := Edit3.Text;
+    zqry1.FieldByName('email_pelanggan').AsString := Edit4.Text;
+    zqry1.FieldByName('alamat').AsString := Edit5.Text;
+    zqry1.Post;
+
+    ShowMessage('Data berhasil diperbarui!');
+    posisiawal;
   end
   else
   begin
-    // Pastikan Anda memperoleh ID saat ini sebelum melakukan Edit
-    idUser := zqry1.FieldByName('id_pelanggan').AsString;
-
-    // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit2.Text = idUser then
-    begin
-      zqry1.Edit;
-      zqry1.FieldByName('nama_lengkap').AsString := Edit2.Text;
-      zqry1.FieldByName('telp_pelanggan').AsString := Edit3.Text;
-      zqry1.FieldByName('email_pelanggan').AsString :=Edit4.Text;
-      zqry1.FieldByName('alamat').AsString := Edit5.Text;
-      zqry1.Post;
-
-      ShowMessage('Data berhasil diperbarui!');
-      posisiawal;
-    end
-    else
-    begin
-      ShowMessage('Perubahan ID tidak diizinkan');
-      posisiawal;
-    end;
+    ShowMessage('Data tidak ada perubahan');
+    posisiawal;
   end;
 end;
 
@@ -181,11 +202,13 @@ end;
 
 procedure TForm5.DBGrid1CellClick(Column: TColumn);
 begin
+  Edit1.Text := zqry1.FieldByName('id_pelanggan').AsString;
   Edit2.Text := zqry1.FieldByName('nama_lengkap').AsString;
   Edit3.Text := zqry1.FieldByName('telp_pelanggan').AsString;
   Edit4.Text := zqry1.FieldByName('email_pelanggan').AsString;
   Edit5.Text := zqry1.FieldByName('alamat').AsString;
 
+  Edit1.Enabled := True;
   Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
@@ -203,11 +226,6 @@ end.
 procedure TForm5.btn5Click(Sender: TObject);
 begin
 posisiawal;
-end;
-
-procedure TForm5.dbgrd1CellClick(Column: TColumn);
-begin
-
 end;
 
 end.

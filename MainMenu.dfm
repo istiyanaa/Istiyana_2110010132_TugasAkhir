@@ -15,13 +15,13 @@ object Form8: TForm8
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 48
-    Top = 120
-    Width = 367
+    Left = 96
+    Top = 144
+    Width = 62
     Height = 24
-    Caption = 'SELAMAT DATANG DI TOKO BUTANI'
+    Caption = 'Label1'
     Font.Charset = ANSI_CHARSET
-    Font.Color = clWhite
+    Font.Color = clWindowText
     Font.Height = -21
     Font.Name = 'Times New Roman'
     Font.Style = [fsBold]
@@ -30,10 +30,6 @@ object Form8: TForm8
   object mm1: TMainMenu
     Left = 8
     Top = 8
-    object mniLogin1: TMenuItem
-      Caption = 'LOGIN'
-      OnClick = mniLogin1Click
-    end
     object mniabel1: TMenuItem
       Caption = 'MENU'
       object mniUser1: TMenuItem
@@ -66,8 +62,12 @@ object Form8: TForm8
       end
     end
     object mniCLOSE1: TMenuItem
-      Caption = 'CLOSE'
+      Caption = 'LAPORAN'
       OnClick = mniCLOSE1Click
+    end
+    object mniCLOSE2: TMenuItem
+      Caption = 'CLOSE'
+      OnClick = mniCLOSE2Click
     end
   end
 end

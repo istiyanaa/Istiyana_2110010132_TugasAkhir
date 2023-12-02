@@ -28,7 +28,12 @@ type
     ds1: TDataSource;
     frxrprt1: TfrxReport;
     frxdbdtst1: TfrxDBDataset;
-    lbl1: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -52,6 +57,8 @@ implementation
 
 procedure TForm6.bersih;
 begin
+  Edit1.Clear;
+  Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
 end;
@@ -64,6 +71,8 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= True;
+  Edit1.Enabled:= True;
+  Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
 end;
@@ -76,21 +85,29 @@ begin
   btn3.Enabled:= False;
   btn4.Enabled:= False;
   btn5.Enabled:= False;
+  Edit1.Enabled:= False;
+  Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
 end;
 
 procedure TForm6.btn2Click(Sender: TObject);
 begin
-if Edit3.Text = '' then
+if Edit1.Text = '' then
+    ShowMessage('Id Stok tidak boleh kosong!')
+  else if Edit2.Text = '' then
+    ShowMessage('Id Barang tidak boleh kosong!')
+  else if Edit3.Text = '' then
     ShowMessage('Nama Barang tidak boleh kosong!')
   else if Edit4.Text = '' then
     ShowMessage('Jumlah Barang tidak boleh kosong!')
   else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO stok (id_stok, nama_barang, jumlah_barang) ' +
-                  'VALUES (:id_stok, :nama_barang, :jumlah_barang)');
+    zqry1.SQL.Add('INSERT INTO stok (id_stok, id_barang, nama_barang, jumlah_barang) ' +
+                  'VALUES (:id_stok, :id_barang, :nama_barang, :jumlah_barang)');
+    zqry1.ParamByName('id_stok').AsString := Edit1.Text;
+    zqry1.ParamByName('id_barang').AsString := Edit2.Text;
     zqry1.ParamByName('nama_barang').AsString := Edit3.Text;
     zqry1.ParamByName('jumlah_barang').AsString := Edit4.Text;
     zqry1.ExecSQL;
@@ -105,36 +122,42 @@ end;
 
 procedure TForm6.btn3Click(Sender: TObject);
 var
-  idUser: string;
+  idStok: string;
+  idBarangBeforeEdit: string;
+  namaBarangBeforeEdit: string;
+  jumlahBarangBeforeEdit: string;
 begin
-  if (Edit3.Text = '') or (Edit4.Text = '') then
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') then
   begin
     ShowMessage('Semua input harus diisi!');
   end
   else
   begin
-    // Pastikan Anda memperoleh ID saat ini sebelum melakukan Edit
-    idUser := zqry1.FieldByName('id_stok').AsString;
+    idStok := zqry1.FieldByName('id_stok').AsString;
+    idBarangBeforeEdit := zqry1.FieldByName('id_barang').AsString;
+    namaBarangBeforeEdit := zqry1.FieldByName('nama_barang').AsString;
+    jumlahBarangBeforeEdit := zqry1.FieldByName('jumlah_barang').AsString;
 
-    // Cek apakah ID input sama dengan ID yang ada di database
-    if Edit3.Text = idUser then
+    if (Edit1.Text <> idStok) or (Edit2.Text <> idBarangBeforeEdit) or
+       (Edit3.Text <> namaBarangBeforeEdit) or (Edit4.Text <> jumlahBarangBeforeEdit) then
     begin
       zqry1.Edit;
+      zqry1.FieldByName('id_stok').AsString := Edit1.Text;
+      zqry1.FieldByName('id_barang').AsString := Edit2.Text;
       zqry1.FieldByName('nama_barang').AsString := Edit3.Text;
-      zqry1.FieldByName('jumlah_barang').AsString :=Edit4.Text;
+      zqry1.FieldByName('jumlah_barang').AsString := Edit4.Text;
       zqry1.Post;
 
       ShowMessage('Data berhasil diperbarui!');
-      posisiawal;
+      PosisiAwal;
     end
     else
     begin
-      ShowMessage('Perubahan ID tidak diizinkan');
-      posisiawal;
+      ShowMessage('Data tidak ada perubahan');
+      PosisiAwal;
     end;
   end;
-
-end;
+  end;
 
 procedure TForm6.btn4Click(Sender: TObject);
 var
@@ -168,9 +191,13 @@ end;
 
 procedure TForm6.dbgrd1CellClick(Column: TColumn);
 begin
+  Edit1.Text := zqry1.FieldByName('id_stok').AsString;
+  Edit2.Text := zqry1.FieldByName('id_barang').AsString;
   Edit3.Text := zqry1.FieldByName('nama_barang').AsString;
   Edit4.Text := zqry1.FieldByName('jumlah_barang').AsString;
 
+  Edit1.Enabled := True;
+  Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
 
