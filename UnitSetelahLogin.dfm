@@ -4,7 +4,7 @@ object Form10: TForm10
   Width = 680
   Height = 496
   Caption = 'Laporan '
-  Color = clOlive
+  Color = clGradientActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

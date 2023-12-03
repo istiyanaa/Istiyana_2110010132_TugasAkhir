@@ -45,6 +45,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -219,6 +220,11 @@ begin
   btn3.Enabled := True;
   btn4.Enabled := True;
   Button1.Enabled := True;
+end;
+
+procedure TForm5.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport(true);
 end;
 
 end.

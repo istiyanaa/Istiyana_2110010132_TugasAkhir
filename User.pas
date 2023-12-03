@@ -50,6 +50,7 @@ type
     procedure Button4Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
     procedure Button5Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -237,6 +238,11 @@ end;
 procedure TForm1.Button5Click(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+frxReport1.ShowReport(true);
 end;
 
 end.

@@ -65,11 +65,11 @@ object Form9: TForm9
     Transparent = True
   end
   object Label3: TLabel
-    Left = 72
+    Left = 112
     Top = 8
-    Width = 128
+    Width = 55
     Height = 24
-    Caption = 'Program Login'
+    Caption = ' Login'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -19

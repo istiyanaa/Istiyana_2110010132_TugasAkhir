@@ -54,6 +54,7 @@ type
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn3Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -239,5 +240,10 @@ begin
       end;
     end;
   end;
+
+procedure TForm7.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport(true);
+end;
 
 end.

@@ -61,13 +61,12 @@ object Form8: TForm8
         OnClick = mniSupplier1Click
       end
     end
-    object mniCLOSE1: TMenuItem
+    object mniLAPORAN1: TMenuItem
       Caption = 'LAPORAN'
-      OnClick = mniCLOSE1Click
     end
-    object mniCLOSE2: TMenuItem
+    object mniCLOSE1: TMenuItem
       Caption = 'CLOSE'
-      OnClick = mniCLOSE2Click
+      OnClick = mniCLOSE1Click
     end
   end
 end

@@ -42,6 +42,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -208,5 +209,10 @@ begin
   btn5.Enabled := True;
 end;
 
+
+procedure TForm6.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport(true);
+end;
 
 end.

@@ -58,6 +58,7 @@ type
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn2Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -288,6 +289,11 @@ end else
     ShowMessage('Data berhasil disimpan!');
     posisiawal;
   end;
+end;
+
+procedure TForm3.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport(true);
 end;
 
 end.
