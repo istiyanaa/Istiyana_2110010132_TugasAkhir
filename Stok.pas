@@ -34,6 +34,9 @@ type
     Label6: TLabel;
     Edit1: TEdit;
     Edit2: TEdit;
+    Label7: TLabel;
+    Label8: TLabel;
+    Edit5: TEdit;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -62,6 +65,7 @@ begin
   Edit2.Clear;
   Edit3.Clear;
   Edit4.Clear;
+  Edit5.Clear;
 end;
 
 procedure TForm6.btn1Click(Sender: TObject);
@@ -76,6 +80,7 @@ begin
   Edit2.Enabled:= True;
   Edit3.Enabled:= True;
   Edit4.Enabled:= True;
+  Edit5.Enabled:= True;
 end;
 
 procedure TForm6.posisiawal;
@@ -90,6 +95,7 @@ begin
   Edit2.Enabled:= False;
   Edit3.Enabled:= False;
   Edit4.Enabled:= False;
+  Edit5.Enabled:= False;
 end;
 
 procedure TForm6.btn2Click(Sender: TObject);
@@ -102,15 +108,18 @@ if Edit1.Text = '' then
     ShowMessage('Nama Barang tidak boleh kosong!')
   else if Edit4.Text = '' then
     ShowMessage('Jumlah Barang tidak boleh kosong!')
+  else if Edit5.Text = '' then
+    ShowMessage('Sisa Stok tidak boleh kosong!')
   else
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('INSERT INTO stok (id_stok, id_barang, nama_barang, jumlah_barang) ' +
-                  'VALUES (:id_stok, :id_barang, :nama_barang, :jumlah_barang)');
+    zqry1.SQL.Add('INSERT INTO stok (id_stok, id_barang, nama_barang, jumlah_barang, sisa_stok) ' +
+                  'VALUES (:id_stok, :id_barang, :nama_barang, :jumlah_barang, :sisa_stok)');
     zqry1.ParamByName('id_stok').AsString := Edit1.Text;
     zqry1.ParamByName('id_barang').AsString := Edit2.Text;
     zqry1.ParamByName('nama_barang').AsString := Edit3.Text;
     zqry1.ParamByName('jumlah_barang').AsString := Edit4.Text;
+    zqry1.ParamByName('sisa_stok').AsString := Edit5.Text;
     zqry1.ExecSQL;
 
     zqry1.SQL.Clear;
@@ -127,8 +136,9 @@ var
   idBarangBeforeEdit: string;
   namaBarangBeforeEdit: string;
   jumlahBarangBeforeEdit: string;
+  sisaStokBeforeEdit: string;
 begin
-  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') then
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or (Edit4.Text = '') or (Edit5.Text = '')then
   begin
     ShowMessage('Semua input harus diisi!');
   end
@@ -138,15 +148,17 @@ begin
     idBarangBeforeEdit := zqry1.FieldByName('id_barang').AsString;
     namaBarangBeforeEdit := zqry1.FieldByName('nama_barang').AsString;
     jumlahBarangBeforeEdit := zqry1.FieldByName('jumlah_barang').AsString;
+    sisaStokBeforeEdit := zqry1.FieldByName('sisa_stok').AsString;
 
     if (Edit1.Text <> idStok) or (Edit2.Text <> idBarangBeforeEdit) or
-       (Edit3.Text <> namaBarangBeforeEdit) or (Edit4.Text <> jumlahBarangBeforeEdit) then
+       (Edit3.Text <> namaBarangBeforeEdit) or (Edit4.Text <> jumlahBarangBeforeEdit) or (Edit5.Text <> sisaStokBeforeEdit) then
     begin
       zqry1.Edit;
       zqry1.FieldByName('id_stok').AsString := Edit1.Text;
       zqry1.FieldByName('id_barang').AsString := Edit2.Text;
       zqry1.FieldByName('nama_barang').AsString := Edit3.Text;
       zqry1.FieldByName('jumlah_barang').AsString := Edit4.Text;
+      zqry1.FieldByName('sisa_stok').AsString := Edit5.Text;
       zqry1.Post;
 
       ShowMessage('Data berhasil diperbarui!');
@@ -196,11 +208,13 @@ begin
   Edit2.Text := zqry1.FieldByName('id_barang').AsString;
   Edit3.Text := zqry1.FieldByName('nama_barang').AsString;
   Edit4.Text := zqry1.FieldByName('jumlah_barang').AsString;
+  Edit5.Text := zqry1.FieldByName('sisa_stok').AsString;
 
   Edit1.Enabled := True;
   Edit2.Enabled := True;
   Edit3.Enabled := True;
   Edit4.Enabled := True;
+  Edit5.Enabled := True;
 
   btn1.Enabled := False;
   btn2.Enabled := True;

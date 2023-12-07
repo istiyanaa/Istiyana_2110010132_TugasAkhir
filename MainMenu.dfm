@@ -60,6 +60,10 @@ object Form8: TForm8
         Caption = 'Supplier'
         OnClick = mniSupplier1Click
       end
+      object ransaksi1: TMenuItem
+        Caption = 'Transaksi'
+        OnClick = ransaksi1Click
+      end
     end
     object mniLAPORAN1: TMenuItem
       Caption = 'LAPORAN'

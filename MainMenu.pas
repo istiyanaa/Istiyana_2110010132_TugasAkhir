@@ -20,6 +20,7 @@ type
     Label1: TLabel;
     mniLAPORAN1: TMenuItem;
     mniCLOSE1: TMenuItem;
+    ransaksi1: TMenuItem;
     procedure mniUser1Click(Sender: TObject);
     procedure mniPembelian1Click(Sender: TObject);
     procedure mniPembelian2Click(Sender: TObject);
@@ -29,6 +30,7 @@ type
     procedure mniSupplier1Click(Sender: TObject);
     procedure mniLogin1Click(Sender: TObject);
     procedure mniCLOSE1Click(Sender: TObject);
+    procedure ransaksi1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +43,7 @@ var
 implementation
 
 uses User, Barang, Pembelian, Penjualan, Pelanggan, Stok, Supplier,
-  UnitLogin;
+  UnitLogin, UnitSetelahLogin;
 
 {$R *.dfm}
 
@@ -88,6 +90,11 @@ end;
 procedure TForm8.mniCLOSE1Click(Sender: TObject);
 begin
 Close;
+end;
+
+procedure TForm8.ransaksi1Click(Sender: TObject);
+begin
+form10.ShowModal;
 end;
 
 end.

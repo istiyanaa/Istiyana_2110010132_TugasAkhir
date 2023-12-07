@@ -117,6 +117,32 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
   end
+  object Label7: TLabel
+    Left = 24
+    Top = 144
+    Width = 58
+    Height = 19
+    Caption = 'Sisa Stok'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 128
+    Top = 144
+    Width = 4
+    Height = 21
+    Caption = ':'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
   object Edit3: TEdit
     Left = 144
     Top = 80
@@ -133,7 +159,7 @@ object Form6: TForm6
   end
   object btn1: TButton
     Left = 40
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -142,7 +168,7 @@ object Form6: TForm6
   end
   object btn2: TButton
     Left = 128
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -151,7 +177,7 @@ object Form6: TForm6
   end
   object btn3: TButton
     Left = 216
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -160,7 +186,7 @@ object Form6: TForm6
   end
   object btn4: TButton
     Left = 304
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -169,7 +195,7 @@ object Form6: TForm6
   end
   object btn5: TButton
     Left = 392
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -178,7 +204,7 @@ object Form6: TForm6
   end
   object btn6: TButton
     Left = 480
-    Top = 160
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'LAPORAN'
@@ -187,7 +213,7 @@ object Form6: TForm6
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 200
+    Top = 232
     Width = 553
     Height = 177
     DataSource = ds1
@@ -198,6 +224,34 @@ object Form6: TForm6
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_stok'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'id_barang'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_barang'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jumlah_barang'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'sisa_stok'
+        Width = 98
+        Visible = True
+      end>
   end
   object Edit1: TEdit
     Left = 144
@@ -213,6 +267,13 @@ object Form6: TForm6
     Height = 21
     TabOrder = 10
   end
+  object Edit5: TEdit
+    Left = 144
+    Top = 144
+    Width = 417
+    Height = 21
+    TabOrder = 11
+  end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
@@ -227,7 +288,7 @@ object Form6: TForm6
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas\libmysql.d' +
       'll'
     Left = 24
-    Top = 336
+    Top = 368
   end
   object zqry1: TZQuery
     Connection = con1
@@ -236,12 +297,12 @@ object Form6: TForm6
       'select * from stok')
     Params = <>
     Left = 72
-    Top = 336
+    Top = 368
   end
   object ds1: TDataSource
     DataSet = zqry1
     Left = 120
-    Top = 336
+    Top = 368
   end
   object frxrprt1: TfrxReport
     Version = '4.0.11'
@@ -259,7 +320,7 @@ object Form6: TForm6
       ''
       'end.')
     Left = 168
-    Top = 336
+    Top = 368
     Datasets = <
       item
         DataSet = frxdbdtst1
@@ -461,6 +522,6 @@ object Form6: TForm6
     CloseDataSource = False
     DataSet = zqry1
     Left = 224
-    Top = 336
+    Top = 368
   end
 end
