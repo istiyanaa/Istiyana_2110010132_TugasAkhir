@@ -32,8 +32,6 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    frxrprt1: TfrxReport;
-    frxdbdtst1: TfrxDBDataset;
     Label7: TLabel;
     Label8: TLabel;
     Edit5: TEdit;
@@ -46,10 +44,16 @@ type
     Label15: TLabel;
     Label16: TLabel;
     Edit8: TEdit;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -150,6 +154,116 @@ if Edit1.Text = '' then
     ShowMessage('Data berhasil disimpan!');
     posisiawal;
   end;
+end;
+
+procedure TForm10.btn3Click(Sender: TObject);
+var
+  idTransaksi: string;
+  idPembelianBeforeEdit: string;
+  idBarangBeforeEdit: string;
+  namaBarangBeforeEdit: string;
+  tanggalBeforeEdit: string;
+  jumlahBeforeEdit: string;
+  hargaSatuanBeforeEdit: string;
+  totalHargaBeforeEdit: string;
+begin
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or
+     (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or 
+     (Edit7.Text = '') or (Edit8.Text = '') then
+  begin
+    ShowMessage('Semua input harus diisi!');
+  end
+  else
+  begin
+    idTransaksi := zqry1.FieldByName('id_transaksi').AsString;
+    idPembelianBeforeEdit := zqry1.FieldByName('id_pembelian').AsString;
+    idBarangBeforeEdit := zqry1.FieldByName('id_barang').AsString;
+    namaBarangBeforeEdit := zqry1.FieldByName('nama_barang').AsString;
+    tanggalBeforeEdit := zqry1.FieldByName('tanggal').AsString;
+    jumlahBeforeEdit := zqry1.FieldByName('jumlah').AsString;
+    hargaSatuanBeforeEdit := zqry1.FieldByName('harga_satuan').AsString;
+    totalHargaBeforeEdit := zqry1.FieldByName('total_harga').AsString;
+
+    if (Edit1.Text <> idTransaksi) or (Edit2.Text <> idPembelianBeforeEdit) or
+       (Edit3.Text <> idBarangBeforeEdit) or (Edit4.Text <> namaBarangBeforeEdit) or
+       (Edit5.Text <> tanggalBeforeEdit) or (Edit6.Text <> jumlahBeforeEdit) or
+       (Edit7.Text <> hargaSatuanBeforeEdit) or (Edit8.Text <> totalHargaBeforeEdit) then
+    begin
+      zqry1.Edit;
+      zqry1.FieldByName('id_transaksi').AsString := Edit1.Text;
+      zqry1.FieldByName('id_pembelian').AsString := Edit2.Text;
+      zqry1.FieldByName('id_barang').AsString := Edit3.Text;
+      zqry1.FieldByName('nama_barang').AsString := Edit4.Text;
+      zqry1.FieldByName('tanggal').AsString := Edit5.Text;
+      zqry1.FieldByName('jumlah').AsString := Edit6.Text;
+      zqry1.FieldByName('harga_satuan').AsString := Edit7.Text;
+      zqry1.FieldByName('total_harga').AsString := Edit8.Text;
+      zqry1.Post;
+
+      ShowMessage('Data berhasil diperbarui!');
+      posisiawal;
+    end
+    else
+    begin
+      ShowMessage('Data tidak ada perubahan');
+      posisiawal;
+    end;
+  end;
+end;
+
+procedure TForm10.btn4Click(Sender: TObject);
+var
+  idTransaksi: string;
+begin
+  if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or
+     (Edit4.Text = '') or (Edit5.Text = '') or (Edit6.Text = '') or
+     (Edit7.Text = '') or (Edit8.Text = '') then
+  begin
+    ShowMessage('Semua input harus diisi!');
+  end
+  else
+  begin
+    idTransaksi := zqry1.FieldByName('id_transaksi').AsString;
+
+    if MessageDlg('Anda yakin ingin menghapus entri ini?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      zqry1.Delete;
+      ShowMessage('Entri berhasil dihapus!');
+      posisiawal;
+    end;
+  end;
+end;
+
+procedure TForm10.btn5Click(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm10.dbgrd1CellClick(Column: TColumn);
+begin
+  Edit1.Text := zqry1.FieldByName('id_transaksi').AsString;
+  Edit2.Text := zqry1.FieldByName('id_pembelian').AsString;
+  Edit3.Text := zqry1.FieldByName('id_barang').AsString;
+  Edit4.Text := zqry1.FieldByName('nama_barang').AsString;
+  Edit5.Text := zqry1.FieldByName('tanggal').AsString;
+  Edit6.Text := zqry1.FieldByName('jumlah').AsString;
+  Edit7.Text := zqry1.FieldByName('harga_satuan').AsString;
+  Edit8.Text := zqry1.FieldByName('total_harga').AsString;
+
+  Edit1.Enabled := True;
+  Edit2.Enabled := True;
+  Edit3.Enabled := True;
+  Edit4.Enabled := True;
+  Edit5.Enabled := True;
+  Edit6.Enabled := True;
+  Edit6.Enabled := True;
+  Edit7.Enabled := True;
+
+  btn1.Enabled := False;
+  btn2.Enabled := True;
+  btn3.Enabled := True;
+  btn4.Enabled := True;
+  btn5.Enabled := True;
 end;
 
 end.
