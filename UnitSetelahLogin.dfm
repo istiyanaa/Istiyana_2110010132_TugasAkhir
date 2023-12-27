@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 395
-  Top = 157
+  Left = 376
+  Top = 95
   Width = 680
   Height = 548
   Caption = 'Transaksi'
@@ -287,6 +287,7 @@ object Form10: TForm10
     Height = 25
     Caption = 'LAPORAN'
     TabOrder = 7
+    OnClick = btn6Click
   end
   object dbgrd1: TDBGrid
     Left = 24
