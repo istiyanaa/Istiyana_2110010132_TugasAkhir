@@ -18,7 +18,6 @@ type
     mniStok1: TMenuItem;
     mniSupplier1: TMenuItem;
     Label1: TLabel;
-    mniLAPORAN1: TMenuItem;
     mniCLOSE1: TMenuItem;
     ransaksi1: TMenuItem;
     procedure mniUser1Click(Sender: TObject);

@@ -65,9 +65,6 @@ object Form8: TForm8
         OnClick = ransaksi1Click
       end
     end
-    object mniLAPORAN1: TMenuItem
-      Caption = 'LAPORAN'
-    end
     object mniCLOSE1: TMenuItem
       Caption = 'CLOSE'
       OnClick = mniCLOSE1Click
